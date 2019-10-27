@@ -1,0 +1,33 @@
+#productRegistrationForm {
+    -fx-background-color: #232d40;
+}
+
+#btnBack {
+    -fx-background-color: #EA2135;
+    -fx-border-radius: 5px;
+    -fx-border-color: #EA2135 #EA2135 #EA2135 #EA2135;
+    -fx-cursor: hand;
+}
+
+#productRegistrationField {
+    -fx-background-color: #232d40;
+    -fx-border-color: #232d40 #232d40 #fff #232d40;
+}
+
+#productRegistrationFields {
+    -fx-font-size: 18px;
+}
+
+#btnRegister {
+    -fx-background-color: #EA2135;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+#illustration {
+    -fx-background-color: #fff;
+}
+
+#paneDecoration {
+    -fx-background-color: #EA2135;
+}

@@ -10,12 +10,12 @@ public class aplicacao extends Application {
     public void start(Stage stage) throws Exception {
         Parent customerRegistration = FXMLLoader.load(
             getClass().getResource(
-                "/br/senac/onRuby/view/CustomerRegistration.fxml"
+                "/br/senac/onRuby/ProductRegistration/ProductRegistration.fxml"
             )
         );
         
         Scene scene = new Scene(customerRegistration);
-        scene.getStylesheets().add("CustomerRegistration.css");
+        scene.getStylesheets().add("ProductRegistration.css");
         
         stage.setScene(scene);
         stage.show();
