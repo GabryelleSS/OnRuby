@@ -1,39 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="780.0" stylesheets="@Home.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.Home.HomeController">
    <children>
-      <Pane prefHeight="446.0" prefWidth="769.0" style="-fx-background-color: blue;">
+      <ImageView id="homeBanner" fitHeight="183.0" fitWidth="796.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icon/geek-background-8.jpg" />
+         </image>
+      </ImageView>
+      <Pane id="homeHeader" prefHeight="55.0" prefWidth="780.0" />
+      <Pane id="homeMenu" prefHeight="500.0" prefWidth="59.0" stylesheets="@Home.css">
          <children>
-            <Pane prefHeight="446.0" prefWidth="48.0" style="-fx-background-color: red;" />
-            <Button id="btnAction" layoutX="594.0" layoutY="166.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="150.0" stylesheets="@Home.css" text="Clientes" />
-            <Pane layoutX="48.0" layoutY="-5.0" prefHeight="131.0" prefWidth="723.0" style="-fx-background-color: yellow;" />
-            <Pane id="paneAction" layoutX="594.0" layoutY="14.0" prefHeight="160.0" prefWidth="150.0" stylesheets="@Home.css">
+            <Button id="btnCloseHome" layoutX="-3.0" layoutY="434.0" mnemonicParsing="false" onAction="#btnCloseHome" prefHeight="68.0" prefWidth="68.0" stylesheets="@Home.css" />
+         </children></Pane>
+      <Pane id="homeBody" layoutX="59.0" layoutY="238.0" prefHeight="262.0" prefWidth="721.0" stylesheets="@Home.css">
+         <children>
+            <Pane id="paneImageAction" layoutX="5.0" layoutY="34.0" prefHeight="144.0" prefWidth="168.0" stylesheets="@Home.css">
                <children>
-                  <ImageView fitHeight="121.0" fitWidth="123.0" layoutX="15.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="97.0" fitWidth="176.0" layoutX="20.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../icon/users.png" />
+                        <Image url="@../../icon/bigode.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane id="paneImageAction" layoutX="539.0" layoutY="34.0" prefHeight="144.0" prefWidth="168.0" stylesheets="@Home.css">
+               <children>
+                  <ImageView fitHeight="122.0" fitWidth="128.0" layoutX="23.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icon/mapa.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
-            <Pane id="paneAction" layoutX="594.0" layoutY="223.0" prefHeight="160.0" prefWidth="150.0" stylesheets="@Home.css">
+            <Pane id="paneImageAction" layoutX="185.0" layoutY="34.0" prefHeight="144.0" prefWidth="168.0" stylesheets="@Home.css">
                <children>
-                  <ImageView fitHeight="121.0" fitWidth="121.0" layoutX="12.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="122.0" fitWidth="128.0" layoutX="20.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../icon/178152.png" />
+                        <Image url="@../../icon/bau-tesouro.png" />
                      </image>
                   </ImageView>
-               </children>
-            </Pane>
-            <Button id="btnAction" layoutX="594.0" layoutY="371.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="150.0" stylesheets="@Home.css" text="Relatório" />
+               </children></Pane>
+            <Pane id="paneImageAction" layoutX="361.0" layoutY="34.0" prefHeight="144.0" prefWidth="168.0" stylesheets="@Home.css">
+               <children>
+                  <ImageView fitHeight="122.0" fitWidth="128.0" layoutX="20.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icon/bau-fechado.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Button id="btnHome" fx:id="btnClient" layoutX="5.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenClientView" prefHeight="38.0" prefWidth="168.0" text="Players" textFill="WHITE" />
+            <Button id="btnHome" layoutX="185.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenSaleView" prefHeight="41.0" prefWidth="168.0" stylesheets="@Home.css" text="Baú de Tesouro" />
+            <Button id="btnHome" layoutX="361.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenStockView" prefHeight="41.0" prefWidth="168.0" stylesheets="@Home.css" text="Inventário" />
+            <Button id="btnHome" layoutX="539.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenReportView" prefHeight="41.0" prefWidth="168.0" text="Mapa do Tesouro" />
          </children>
       </Pane>
+      <Label id="titleStore" layoutX="100.0" layoutY="107.0" text="Nome da loja" />
    </children>
 </AnchorPane>
