@@ -31,7 +31,7 @@
             </Pane>
          </children>
       </Pane>
-      <Pane id="productRegistrationForm" layoutX="275.0" prefHeight="450.0" prefWidth="494.0" stylesheets="@ProductRegistration.css">
+      <Pane id="productRegistrationForm" layoutX="275.0" prefHeight="450.0" prefWidth="494.0" stylesheets="@StockRegistration.css">
          <children>
             <Label id="productRegistrationFields" layoutX="17.0" layoutY="74.0" text="Id" textFill="WHITE" />
             <Label id="productRegistrationFields" layoutX="17.0" layoutY="141.0" text="Nome" textFill="WHITE" />

@@ -13,3 +13,47 @@
     -fx-pref-height: 38px;
 }
 
+#homeHeader {
+    -fx-background-color: #0c323b;
+}
+
+#homeMenu {
+    -fx-background-color: #0c323b;
+}
+
+#homeBanner {
+
+}
+
+#homeBody {
+    -fx-background-color: #0e3d47;
+}
+
+#paneImageAction {
+    -fx-background-color: #f8701d;
+    -fx-border-radius: 10px;
+}
+
+#btnHome {
+    -fx-background-color: #e9671c;
+    -fx-cursor: hand;
+    -fx-border-radius: 5px;
+    -fx-text-fill: #fff;
+    -fx-font-size: 18px;
+    -fx-border-color: #e9671c #e9671c #e9671c #e9671c;
+    font-family: sans-serif;
+}
+
+#titleStore {
+    font-family: sans-serif;
+    -fx-font-size: 28px;
+    -fx-text-fill: #fff;
+}
+
+#btnCloseHome {
+    -fx-background-image: url("../../icon/doorClose.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover, auto;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}

@@ -10,11 +10,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="769.0" stylesheets="@CustomerRegistration.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.view.CustomerRegistrationController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="780.0" stylesheets="@CustomerRegistration.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.view.CustomerRegistrationController">
    <children>
-      <Pane layoutY="-1.0" prefHeight="446.0" prefWidth="769.0" style="-fx-background-color: #1c1b21;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutY="-1.0" prefHeight="442.0" prefWidth="769.0" style="-fx-background-color: #1c1b21;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Pane prefHeight="450.0" prefWidth="100.0" style="-fx-background-color: #c12d2d;" />
+            <Pane prefHeight="500.0" prefWidth="100.0" style="-fx-background-color: #c12d2d;" />
             <Pane prefHeight="75.0" prefWidth="647.0" style="-fx-background-color: #c12d2d;">
                <children>
                   <Label id="title" layoutX="107.0" layoutY="14.0" text="Cadastro de Cliente">
