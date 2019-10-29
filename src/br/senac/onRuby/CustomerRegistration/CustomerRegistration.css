@@ -48,3 +48,12 @@
     -fx-border-color: #0978eb;
     -fx-cursor: hand;
 }
+
+#modalMenssager {
+    -fx-background-color: #0978eb; 
+    visibility: hidden;
+}
+
+#modalMenssagerHeader {
+    -fx-background-color: red;
+}
