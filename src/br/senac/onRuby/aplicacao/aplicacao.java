@@ -10,7 +10,7 @@ public class aplicacao extends Application {
     public void start(Stage stage) throws Exception {
         Parent customerRegistration = FXMLLoader.load(
             getClass().getResource(
-                "/br/senac/onRuby/Home/Home.fxml"
+                "/br/senac/onRuby/Trade/Trade.fxml"
             )
         );
         
