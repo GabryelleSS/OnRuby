@@ -1,0 +1,5 @@
+#teste {
+    -fx-background-image: url("../../icon/teste.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover, auto;
+}

@@ -10,11 +10,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="769.0" stylesheets="@CustomerRegistration.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.view.CustomerRegistrationController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="780.0" stylesheets="@CustomerRegistration.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.view.CustomerRegistrationController">
    <children>
-      <Pane layoutY="-1.0" prefHeight="446.0" prefWidth="769.0" style="-fx-background-color: #1c1b21;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutY="-1.0" prefHeight="442.0" prefWidth="769.0" style="-fx-background-color: #1c1b21;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Pane prefHeight="450.0" prefWidth="100.0" style="-fx-background-color: #c12d2d;" />
+            <Pane prefHeight="500.0" prefWidth="100.0" style="-fx-background-color: #c12d2d;" />
             <Pane prefHeight="75.0" prefWidth="647.0" style="-fx-background-color: #c12d2d;">
                <children>
                   <Label id="title" layoutX="107.0" layoutY="14.0" text="Cadastro de Cliente">
@@ -39,27 +39,43 @@
             <Label id="customerRegistrationFields" layoutX="329.0" layoutY="87.0" text="CEP" />
             <Label id="customerRegistrationFields" layoutX="331.0" layoutY="347.0" text="Cidade" />
             <Label id="customerRegistrationFields" layoutX="544.0" layoutY="86.0" text="Estado" />
-            <TextField id="customerInformation" layoutX="115.0" layoutY="113.0" prefHeight="27.0" prefWidth="181.0" />
-            <TextField id="customerInformation" layoutX="116.0" layoutY="181.0" prefHeight="27.0" prefWidth="181.0" />
-            <TextField id="customerInformation" layoutX="116.0" layoutY="247.0" prefHeight="27.0" prefWidth="181.0" />
-            <TextField id="customerInformation" layoutX="115.0" layoutY="311.0" prefHeight="27.0" prefWidth="181.0" />
+            <TextField id="customerInformation" fx:id="fieldFirstName" layoutX="115.0" layoutY="113.0" prefHeight="27.0" prefWidth="181.0" />
+            <TextField id="customerInformation" fx:id="fieldLastName" layoutX="116.0" layoutY="181.0" prefHeight="27.0" prefWidth="181.0" />
+            <TextField id="customerInformation" fx:id="fieldRG" layoutX="116.0" layoutY="247.0" prefHeight="27.0" prefWidth="181.0" />
+            <TextField id="customerInformation" fx:id="fieldCPF" layoutX="115.0" layoutY="311.0" prefHeight="27.0" prefWidth="181.0" />
             <Text id="customerRegistrationFields" fill="WHITE" layoutX="117.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular" />
-            <TextField id="customerInformation" layoutX="116.0" layoutY="380.0" prefHeight="27.0" prefWidth="181.0" />
-            <TextField id="customerInformation" layoutX="329.0" layoutY="114.0" prefHeight="27.0" prefWidth="181.0" />
-            <TextField id="customerInformation" layoutX="329.0" layoutY="179.0" prefHeight="27.0" prefWidth="181.0" />
-            <TextField id="customerInformation" layoutX="329.0" layoutY="248.0" prefHeight="27.0" prefWidth="181.0" />
-            <TextField id="customerInformation" layoutX="329.0" layoutY="312.0" prefHeight="27.0" prefWidth="181.0" />
-            <TextField id="customerInformation" layoutX="329.0" layoutY="381.0" prefHeight="27.0" prefWidth="181.0" />
-            <TextField id="customerInformation" layoutX="544.0" layoutY="114.0" prefHeight="27.0" prefWidth="181.0" />
-            <TextField id="customerInformation" layoutX="544.0" layoutY="179.0" prefHeight="27.0" prefWidth="181.0" />
+            <TextField id="customerInformation" fx:id="fieldPhone" layoutX="116.0" layoutY="380.0" prefHeight="27.0" prefWidth="181.0" />
+            <TextField id="customerInformation" fx:id="filedCEP" layoutX="329.0" layoutY="114.0" prefHeight="27.0" prefWidth="181.0" />
+            <TextField id="customerInformation" fx:id="fieldStreet" layoutX="329.0" layoutY="179.0" prefHeight="27.0" prefWidth="181.0" />
+            <TextField id="customerInformation" fx:id="fieldNeighborhood" layoutX="329.0" layoutY="248.0" prefHeight="27.0" prefWidth="181.0" />
+            <TextField id="customerInformation" fx:id="fieldNumber" layoutX="329.0" layoutY="312.0" prefHeight="27.0" prefWidth="181.0" />
+            <TextField id="customerInformation" fx:id="fieldCity" layoutX="329.0" layoutY="381.0" prefHeight="27.0" prefWidth="181.0" />
+            <TextField id="customerInformation" fx:id="fieldStates" layoutX="544.0" layoutY="114.0" prefHeight="27.0" prefWidth="181.0" />
+            <TextField id="customerInformation" fx:id="fieldComplement" layoutX="544.0" layoutY="179.0" prefHeight="27.0" prefWidth="181.0" />
             <Label id="customerRegistrationFields" layoutX="544.0" layoutY="150.0" text="Complemento" />
-            <Button id="btnCustomerRegistration" layoutX="661.0" layoutY="380.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="92.0" text="Cadastrar" />
+            <Button id="btnCustomerRegistration" layoutX="661.0" layoutY="380.0" mnemonicParsing="false" onAction="#registerCustomer" prefHeight="27.0" prefWidth="92.0" text="Cadastrar" />
             <Button id="btnBack" layoutX="552.0" layoutY="380.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="92.0" text="Voltar" />
             <ImageView fitHeight="67.0" fitWidth="93.0" layoutX="661.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../icon/logo_180.png" />
                </image>
             </ImageView>
+            <Pane id="modalMenssager" layoutX="220.0" layoutY="152.0" prefHeight="163.0" prefWidth="349.0" stylesheets="@CustomerRegistration.css">
+               <children>
+                  <Pane id="modalMenssagerHeader" prefHeight="47.0" prefWidth="349.0">
+                     <children>
+                        <Label layoutX="62.0" layoutY="15.0" prefHeight="17.0" prefWidth="113.0" text="Hey!" />
+                        <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="8.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/checked.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Button layoutX="283.0" layoutY="124.0" mnemonicParsing="false" text="Fechar" />
+                  <Label layoutX="90.0" layoutY="82.0" text="Cadastro realizado com sucesso" />
+               </children>
+            </Pane>
          </children>
       </Pane>
    </children>

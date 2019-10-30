@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 
 public class aplicacao extends Application {
     public void start(Stage stage) throws Exception {
+        stage.setTitle("Home");
+        
         Parent customerRegistration = FXMLLoader.load(
             getClass().getResource(
                 "/br/senac/onRuby/Trade/Trade.fxml"
@@ -15,7 +17,6 @@ public class aplicacao extends Application {
         );
         
         Scene scene = new Scene(customerRegistration);
-        scene.getStylesheets().add("Home.css");
         
         stage.setScene(scene);
         stage.show();
