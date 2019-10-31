@@ -1,4 +1,4 @@
-package br.senac.onRuby.Question;
+package br.senac.onRuby.ChooseClientView;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,16 +7,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class QuestionController {
+public class ChooseClientViewController {
     
     private Stage clientStage;
 
-    @FXML
     private void btnRegisterClient() throws Exception {
         if(clientStage == null || !clientStage.isShowing()) {
             Parent viewClient = FXMLLoader.load(
                 getClass().getResource(
-                    "/br/senac/onRuby/CustomerRegistration/CustomerRegistration.fxml"
+                    "/br/senac/onRuby/ClientRegistration/ClientRegistration.fxml"
                 )
             );
             
@@ -29,12 +28,11 @@ public class QuestionController {
         }
     }
 
-    @FXML
     private void btnConsultClient() throws Exception {
         if(clientStage == null || !clientStage.isShowing()) {
             Parent viewClient = FXMLLoader.load(
                 getClass().getResource(
-                    "/br/senac/onRuby/CustomerRegistration/CustomerRegistration.fxml"
+                    "/br/senac/onRuby/ClientRegistration/ClientRegistration.fxml"
                 )
             );
             
@@ -46,6 +44,10 @@ public class QuestionController {
             clientStage.show();
         }
         
+    }
+
+    @FXML
+    private void btnBackHome(ActionEvent event) {
     }
     
 }

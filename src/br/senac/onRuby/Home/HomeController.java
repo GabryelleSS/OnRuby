@@ -24,14 +24,14 @@ public class HomeController {
     @FXML
     private void btnOpenClientView() throws Exception {
         if(clientStage == null || !clientStage.isShowing()) {
-            Parent viewClient = FXMLLoader.load(
+            Parent viewChooseClient = FXMLLoader.load(
                 getClass().getResource(
-                    "/br/senac/onRuby/Question/Question.fxml"
+                    "/br/senac/onRuby/ChooseClientView/ChooseClientView.fxml"
                 )
             );
             
             clientStage = new Stage();
-            Scene scene = new Scene(viewClient);
+            Scene scene = new Scene(viewChooseClient);
 
             clientStage.setScene(scene);
             clientStage.setTitle("Cliente");

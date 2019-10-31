@@ -10,13 +10,13 @@ public class aplicacao extends Application {
     public void start(Stage stage) throws Exception {
         stage.setTitle("Home");
         
-        Parent customerRegistration = FXMLLoader.load(
+        Parent home = FXMLLoader.load(
             getClass().getResource(
                 "/br/senac/onRuby/Home/Home.fxml"
             )
         );
         
-        Scene scene = new Scene(customerRegistration);
+        Scene scene = new Scene(home);
         
         stage.setScene(scene);
         stage.show();

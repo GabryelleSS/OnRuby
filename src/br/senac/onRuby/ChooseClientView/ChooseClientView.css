@@ -1,5 +1,28 @@
-#teste {
-    -fx-background-image: url("../../icon/teste.jpg");
-    -fx-background-repeat: no-repeat;
-    -fx-background-size: cover, auto;
+#containerChooseClient {
+    -fx-background-color: #0e3d47;
+}
+
+#menuChoosenClient {
+    -fx-background-color: #f8fafb;
+}
+
+#containerTitleChoosenClient {
+    -fx-background-color: #f8fafb;
+}
+
+#titleChooseClient {
+    -fx-font-size: 34px;
+    -fx-text-fill: #000;
+}
+
+#paneSearchClient {
+    -fx-background-color: #f8fafb;
+}
+
+#btnRegisterClient, #btnConsultClient, #btnBackHome {
+    -fx-text-fill: #fff;
+    -fx-background-color: #239bda;
+    -fx-cursor: hand;
+    -fx-border-radius: 10px;
+    -fx-font-size: 18px;
 }
