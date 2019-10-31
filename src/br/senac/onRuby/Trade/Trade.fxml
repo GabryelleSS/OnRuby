@@ -18,7 +18,7 @@
       <Button layoutX="283.0" layoutY="160.0" mnemonicParsing="false" onAction="#Select" text="--&gt;" />
       <TextField fx:id="imputName" layoutX="227.0" layoutY="78.0" />
       <TextField fx:id="imputQuant" layoutX="227.0" layoutY="231.0" />
-      <TitledPane fx:id="listItem" layoutX="13.0" layoutY="116.0" prefHeight="200.0" prefWidth="200.0" text="Produto" />
+      <TitledPane fx:id="listItem" layoutX="13.0" layoutY="116.0" onMouseClicked="#Select2" prefHeight="200.0" prefWidth="200.0" text="Produto" />
       <TitledPane fx:id="listProdSelecionado" layoutX="393.0" layoutY="116.0" prefHeight="200.0" prefWidth="200.0" text="Produto Selecionado" />
    </children>
 </AnchorPane>

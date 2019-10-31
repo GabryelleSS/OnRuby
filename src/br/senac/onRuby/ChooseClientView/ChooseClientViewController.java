@@ -1,4 +1,4 @@
-package br.senac.onRuby.Question;
+package br.senac.onRuby.ChooseClientView;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,7 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class QuestionController {
+public class ChooseClientViewController {
     
     private Stage clientStage;
 

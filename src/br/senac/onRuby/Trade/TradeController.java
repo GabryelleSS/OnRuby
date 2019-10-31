@@ -13,6 +13,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
+import javafx.scene.input.MouseEvent;
 
 public class TradeController implements Initializable {
 
@@ -54,11 +55,21 @@ public class TradeController implements Initializable {
     private void Filter(ActionEvent event) {
         Label label = new Label(listCategory.getValue());
         listItem.setContent(label);
+        
+        
     }
 
     @FXML
     private void Select(ActionEvent event) {
+        Label label = new Label(listCategory.getValue());
+        listItem.setContent(label);
         
+        
+        listProdSelecionado.setContent(label);        
+    }
+
+    @FXML
+    private void Select2(MouseEvent event) {
     }
     
 }
