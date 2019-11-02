@@ -4,7 +4,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -14,6 +17,7 @@ import javafx.stage.Stage;
 
 public class ClientRegistrationController implements Initializable {
 
+    private Stage ClientRegistrationStage;
     @FXML
     private TextField fieldFirstName;
     @FXML
@@ -81,9 +85,24 @@ public class ClientRegistrationController implements Initializable {
     }
 
     @FXML
-    private void btnBackChooseClientView(ActionEvent event) {
-        Stage stage = (Stage) btnBackChooseClient.getScene().getWindow();
-        stage.close();
+    private void btnBackChooseClientView() throws Exception {
+        if(ClientRegistrationStage == null || !ClientRegistrationStage.isShowing()) {
+            Parent clientRegistration = FXMLLoader.load(
+                getClass().getResource(
+                    "/br/senac/onRuby/ChooseClientView/ChooseClientView.fxml"
+                )
+            );
+            
+            ClientRegistrationStage = new Stage();
+            Scene scene = new Scene(clientRegistration);
+
+            ClientRegistrationStage.setScene(scene);
+            ClientRegistrationStage.setTitle("Player");
+            ClientRegistrationStage.show();
+        
+            Stage stage = (Stage) btnBackChooseClient.getScene().getWindow();
+            stage.close();
+        }
     }
 
     @FXML

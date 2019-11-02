@@ -19,7 +19,9 @@
     -fx-background-color: #f8fafb;
 }
 
-#btnRegisterClient, #btnConsultClient, #btnBackHome {
+#btnRegisterClient, 
+#btnConsultClient, 
+#btnBackHome {
     -fx-text-fill: #fff;
     -fx-background-color: #239bda;
     -fx-cursor: hand;

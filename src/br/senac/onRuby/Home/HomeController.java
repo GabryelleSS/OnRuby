@@ -1,102 +1,76 @@
 package br.senac.onRuby.Home;
 
-import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Tooltip;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class HomeController {
     
-    private Stage clientStage;
-    private Stage saleStage;
-    private Stage stockStage;
-    private Stage reportStage;
+    private Stage homeStage;
 
     @FXML
     private Button btnClient;
-
     @FXML
-    private void btnOpenClientView() throws Exception {
-        if(clientStage == null || !clientStage.isShowing()) {
-            Parent viewChooseClient = FXMLLoader.load(
-                getClass().getResource(
-                    "/br/senac/onRuby/ChooseClientView/ChooseClientView.fxml"
-                )
-            );
-            
-            clientStage = new Stage();
-            Scene scene = new Scene(viewChooseClient);
-
-            clientStage.setScene(scene);
-            clientStage.setTitle("Cliente");
-            clientStage.show();
-        }
-    }
-
-    @FXML
-    private void btnOpenSaleView() throws Exception {
-        if(saleStage == null || !saleStage.isShowing()) {
-            Parent viewSale = FXMLLoader.load(
-                getClass().getResource(
-                    "/br/senac/onRuby/SaleRegistration/SaleRegistration.fxml"
-                )
-            );
-
-            saleStage = new Stage();
-            Scene scene = new Scene(viewSale);
-
-            saleStage.setScene(scene);
-            saleStage.setTitle("Cadastro de Produtos");
-            saleStage.show();
-        }
-    }
-
-    @FXML
-    private void btnOpenStockView() throws Exception {
-        if(stockStage == null || !stockStage.isShowing()) {
-            Parent viewStock = FXMLLoader.load(
-                getClass().getResource(
-                    "/br/senac/onRuby/StockRegistration/StockRegistration.fxml"
-                )
-            );
-
-            stockStage = new Stage();
-            Scene scene = new Scene(viewStock);
-
-            stockStage.setScene(scene);
-            stockStage.setTitle("Cadastro de Estoque");
-            stockStage.show();
-        }
-    }
-
-    @FXML
-    private void btnOpenReportView() throws Exception {
-        if(reportStage == null || !reportStage.isShowing()) {
-            Parent viewReport = FXMLLoader.load(
-                getClass().getResource(
-                    "/br/senac/onRuby/ReportRegistration/ReportRegistration.fxml"
-                )
-            );
-
-            reportStage = new Stage();
-            Scene scene = new Scene(viewReport);
-
-            reportStage.setScene(scene);
-            reportStage.setTitle("Cadastro de Relatórios");
-            reportStage.show();
-        }
-        
-    }
+    private Button btnCloseHome;
 
     @FXML
     private void btnCloseHome(ActionEvent event) {
         System.exit(0);
     }
-    
+
+    @FXML
+    private void btnOpenClientView() throws Exception {
+        if(homeStage == null || !homeStage.isShowing()) {
+            Parent consult = FXMLLoader.load(
+                getClass().getResource(
+                    "/br/senac/onRuby/ChooseClientView/ChooseClientView.fxml"
+                )
+            );
+            
+            homeStage = new Stage();
+            Scene scene = new Scene(consult);
+            
+            homeStage.setScene(scene);
+            homeStage.setTitle("Player");
+            homeStage.show();
+        }
+       
+        Stage stage = (Stage) btnCloseHome.getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
+    private void btnOpenClothingSale() throws Exception {
+        if(homeStage == null || !homeStage.isShowing()) {
+            Parent choosenClothingSale = FXMLLoader.load(
+                getClass().getResource(
+                    "/br/senac/onRuby/ChooseClothingSale/ChooseClothingSale.fxml"
+                )
+            );
+            
+            homeStage = new Stage();
+            Scene scene = new Scene(choosenClothingSale);
+            
+            homeStage.setScene(scene);
+            homeStage.setTitle("Baú de Tesouro");
+            homeStage.show();
+        }
+       
+        Stage stage = (Stage) btnCloseHome.getScene().getWindow();
+        stage.close();
+        
+    }
+
+    @FXML
+    private void btnOpenStockView(ActionEvent event) {
+    }
+
+    @FXML
+    private void btnOpenReportView(ActionEvent event) {
+    }
+   
 }

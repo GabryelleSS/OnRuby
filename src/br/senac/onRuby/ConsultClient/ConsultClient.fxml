@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.ConsultClient.ConsultClientController">
    <children>
       <Pane id="paneConsultClient" prefHeight="500.0" prefWidth="780.0" stylesheets="@ConsultClient.css">
          <children>
@@ -31,7 +31,7 @@
                         <Image url="@../../icon/speech-bubble.png" />
                      </image>
                   </ImageView>
-                  <Label id="tilteConsultClient" layoutX="253.0" layoutY="17.0" stylesheets="@../ClientRegistration/ClientRegistration.css" text="Consultar Players Registrados" textFill="WHITE">
+                  <Label id="tilteConsultClient" layoutX="233.0" layoutY="17.0" stylesheets="@../ClientRegistration/ClientRegistration.css" text="Consultar Players Registrados" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -54,10 +54,10 @@
                   <TableColumn minWidth="0.0" prefWidth="144.0" text="Telefone" />
               </columns>
             </TableView>
-            <TextField id="FieldSearchClient" layoutX="220.0" layoutY="106.0" prefHeight="33.0" prefWidth="323.0" promptText="Digite o CPF, Nome ou Telefone" />
-            <Button id="btnSearchClient" layoutX="549.0" layoutY="106.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="72.0" text="Pesquisar" />
-            <Button id="btnClearFieldSearch" layoutX="653.0" layoutY="106.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="61.0" text="Limpar" />
-            <Button id="btnBackChooseClient" layoutX="684.0" layoutY="453.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="82.0" text="Voltar" />
+            <TextField id="FieldSearchClient" fx:id="fielSearchClient" layoutX="220.0" layoutY="106.0" prefHeight="33.0" prefWidth="309.0" promptText="Digite o CPF, Nome ou Telefone" />
+            <Button id="btnSearchClient" layoutX="537.0" layoutY="106.0" mnemonicParsing="false" onAction="#btnSearchClient" prefHeight="33.0" prefWidth="82.0" text="Pesquisar" />
+            <Button id="btnClearFieldSearch" layoutX="645.0" layoutY="106.0" mnemonicParsing="false" onAction="#btnClearFieldSearch" prefHeight="33.0" prefWidth="69.0" text="Limpar" />
+            <Button id="btnBackChooseClient" fx:id="btnBackChooseClient" layoutX="684.0" layoutY="453.0" mnemonicParsing="false" onAction="#btnBackChooseClient" prefHeight="33.0" prefWidth="82.0" text="Voltar" />
          </children>
       </Pane>
    </children>

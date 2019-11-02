@@ -10,9 +10,14 @@ import javafx.stage.Stage;
 
 public class ChooseClientViewController {
     
+    private Stage ChooseClientViewStage;
     private Stage clientStage;
     @FXML
     private Button btnBackHome;
+    @FXML
+    private Button btnCloseRegisterClient;
+    @FXML
+    private Button btnCloseConsultClient;
 
     @FXML
     private void btnRegisterClient() throws Exception {
@@ -30,6 +35,9 @@ public class ChooseClientViewController {
             clientStage.setTitle("Cadastro de Cliente");
             clientStage.show();
         }
+        
+        Stage stage = (Stage) btnCloseRegisterClient.getScene().getWindow();
+        stage.close();        
     }
 
     @FXML
@@ -37,7 +45,7 @@ public class ChooseClientViewController {
         if(clientStage == null || !clientStage.isShowing()) {
             Parent ClientRegistration = FXMLLoader.load(
                 getClass().getResource(
-                    "/br/senac/onRuby/ClientRegistration/ClientRegistration.fxml"
+                    "/br/senac/onRuby/ConsultClient/ConsultClient.fxml"
                 )
             );
             
@@ -49,10 +57,27 @@ public class ChooseClientViewController {
             clientStage.show();
         }
         
+        Stage stage = (Stage) btnCloseConsultClient.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
     private void btnBackHome() throws Exception {
+        if(ChooseClientViewStage == null || !ChooseClientViewStage.isShowing()) {
+            Parent chooseClient = FXMLLoader.load(
+                getClass().getResource(
+                    "/br/senac/onRuby/Home/Home.fxml"
+                )
+            );
+            
+            ChooseClientViewStage = new Stage();
+            Scene scene = new Scene(chooseClient);
+
+            ChooseClientViewStage.setScene(scene);
+            ChooseClientViewStage.setTitle("Home");
+            ChooseClientViewStage.show();
+        }
+        
         Stage stage = (Stage) btnBackHome.getScene().getWindow();
         stage.close();
     }

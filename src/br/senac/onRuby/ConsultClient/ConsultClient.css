@@ -12,5 +12,22 @@
 }
 
 #menuConsultClient {
+    -fx-background-color: #476896;
+}
 
+#btnSearchClient, 
+#btnClearFieldSearch, 
+#btnBackChooseClient {
+    -fx-background-color: #239bda;
+    -fx-border-radius: 10px;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
+
+#btnSearchClient:hover, 
+#btnClearFieldSearch:hover, 
+#btnBackChooseClient:hover {
+    -fx-background-color: #476896;
+    -fx-border-color: #239bda;
+    -fx-border-radius: 5px;
 }

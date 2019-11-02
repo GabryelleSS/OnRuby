@@ -1,0 +1,41 @@
+#bodyChooseClothingSales {
+    -fx-background-image: url("../../icon/backgroundChooseClothing.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover, auto;
+}
+
+#headerChooseClothingSales {
+    -fx-background-color: #7aaeecf2;
+}
+
+#menuChooseClothingSales {
+    -fx-background-color: #7aaeecf2;
+}
+
+#containerRegisterSale {
+    -fx-background-color: #7aaeecf2;
+    -fx-border-radius: 10px;
+}
+
+#containerConsultSale {
+    -fx-background-color: #7aaeecf2;
+    -fx-border-radius: 10px;
+}
+
+#btnRegisterSale, 
+#btnConsultSale, #btnBackHome {
+    -fx-background-color: #1273eb;
+    -fx-border-radius: 10px;
+    -fx-font-size: 16px;
+    -fx-text-fill: #fff;
+}
+
+#btnRegisterSale:hover, 
+#btnConsultSale:hover {
+    -fx-cursor: hand;
+}
+
+#btnBackHome:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #002048;
+}
