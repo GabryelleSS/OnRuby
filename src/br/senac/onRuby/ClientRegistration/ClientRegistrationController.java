@@ -61,20 +61,23 @@ public class ClientRegistrationController implements Initializable {
         boolean checkLastNameEmpty = lastNameClient.trim().isEmpty();
         
         if(firstNameClient == null || checkFirstNameEmpty) {
-            titleNotificationWarning.setText("Hey");
+            titleNotificationWarning.setText("Cuidado!");
             contentNotificationWarning.setText("O campo \"Nome\" é obrigatório, por gentileza preencha!");
             paneNotificationWarning.setVisible(true);
         }
-        else {
-            if(lastNameClient == null || checkLastNameEmpty) {
-                titleNotificationWarning.setText("Hey");
-                contentNotificationWarning.setText("O campo \"Sobrenome\" é obrigatório, por gentileza preencha!");
-                paneNotificationWarning.setVisible(true);
-                System.out.print("Oi");
-            }
+        else if(lastNameClient == null || checkLastNameEmpty) {
+            titleNotificationWarning.setText("Cuidado!");
+            contentNotificationWarning.setText("O campo \"Sobrenome\" é obrigatório, por gentileza preencha!");
+            paneNotificationWarning.setVisible(true);
         }
-        
-        
+        else {
+            titleNotificationWarning.setText("Concluído!");
+            contentNotificationWarning.setText("Player criado!");
+            paneNotificationWarning.setVisible(true);
+            
+            fieldFirstName.setText("");
+            fieldLastName.setText("");
+        }
     }
 
     @FXML
@@ -86,7 +89,6 @@ public class ClientRegistrationController implements Initializable {
     @FXML
     private void btnConfirmNotificationWarning(ActionEvent event) {
         paneNotificationWarning.setVisible(false);
-            System.out.print("Oi");
     }
     
 }

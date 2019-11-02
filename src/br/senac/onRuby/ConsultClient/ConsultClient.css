@@ -1,0 +1,16 @@
+#paneConsultClient {
+    -fx-background-color: #476896;
+}
+
+#headerConsultClient {
+    -fx-background-color: #00367D;
+}
+
+#titleConsultClient {
+    -fx-font-size: 34px;
+    -fx-text-fill: #fff;
+}
+
+#menuConsultClient {
+
+}

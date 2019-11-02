@@ -24,7 +24,7 @@
                </children></Pane>
             <Pane id="paneTitleClient" prefHeight="75.0" prefWidth="653.0">
                <children>
-                  <Label id="title" layoutX="24.0" layoutY="16.0" text="Cadastro de Jogador">
+                  <Label id="title" layoutX="24.0" layoutY="16.0" text="Cadastro do Jogador">
                      <font>
                         <Font size="32.0" />
                      </font>
