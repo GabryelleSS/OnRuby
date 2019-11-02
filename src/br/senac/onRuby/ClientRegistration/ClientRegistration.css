@@ -1,3 +1,11 @@
+#menuRegistrationClient {
+    -fx-background-color: #162345;
+}
+
+#paneTitleClient {
+    -fx-background-color: #162345;
+}
+
 #title {
     -fx-font-size: 22x;
     -fx-text-fill: #fff;
@@ -24,6 +32,7 @@
     -fx-background-color: #1c1b21;
     -fx-text-fill: #fff;
     -fx-border-radius: 5px;
+    -fx-font-size: 16px;
 }
 
 #btnCustomerRegistration:hover {
@@ -39,6 +48,7 @@
     -fx-background-color: #1c1b21;
     -fx-text-fill: #fff;
     -fx-border-radius: 5px;
+    -fx-font-size: 16px;
 }
 
 #btnBack:hover {
@@ -49,11 +59,33 @@
     -fx-cursor: hand;
 }
 
-#modalMenssager {
-    -fx-background-color: #0978eb; 
+#paneNotificationWarning {
+    -fx-background-color: #162345;
+    -fx-border-radius: 5px;
     visibility: hidden;
 }
 
-#modalMenssagerHeader {
-    -fx-background-color: red;
+#headerNotificationWarning {
+    -fx-background-color: #0b55a2f1;
+}
+
+#btnCloseNotificationWarning {
+    -fx-border-color: #0b55a2 #0b55a2 #0b55a2 #0b55a2;
+    -fx-background-color: #0b55a2;
+    -fx-text-fill: #fff;
+    -fx-border-radius: 5px;
+    -fx-font-size: 16px;
+}
+
+#btnCloseNotificationWarning:hover {
+    -fx-text-fill: #fff;
+    -fx-background-color: #0978eb; 
+    -fx-text-fill: #1c1b21;
+    -fx-border-color: #0978eb;
+    -fx-cursor: hand;
+}
+
+#notificationWarning {
+    -fx-text-fill: #fff;
+    -fx-font-size: 16px;
 }

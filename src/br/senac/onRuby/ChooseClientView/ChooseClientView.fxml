@@ -29,7 +29,7 @@
             </ImageView>
             <Pane id="paneSearchClient" layoutX="145.0" layoutY="207.0" prefHeight="200.0" prefWidth="170.0">
                <children>
-                  <Button id="btnRegisterClient" layoutY="181.0" mnemonicParsing="false" onAction="#btnRegisterClient" prefHeight="39.0" prefWidth="170.0" text="Cadastrar Cliente" />
+                  <Button id="btnRegisterClient" layoutY="181.0" mnemonicParsing="false" onAction="#btnRegisterClient" prefHeight="39.0" prefWidth="170.0" text="Criar Player" />
                   <ImageView fitHeight="111.0" fitWidth="137.0" layoutX="30.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../icon/account.png" />
@@ -38,7 +38,7 @@
                </children>
             </Pane>
             <Button id="btnBackHome" fx:id="btnBackHome" layoutX="693.0" layoutY="455.0" mnemonicParsing="false" onAction="#btnBackHome" text="Voltar" />
-            <Pane id="paneSearchClient" layoutX="559.0" layoutY="207.0" prefHeight="200.0" prefWidth="170.0">
+            <Pane id="paneSearchClient" layoutX="533.0" layoutY="207.0" prefHeight="200.0" prefWidth="170.0">
                <children>
                   <ImageView fitHeight="111.0" fitWidth="111.0" layoutX="30.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -47,7 +47,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Button id="btnConsultClient" layoutX="559.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnConsultClient" prefHeight="39.0" prefWidth="170.0" text="Consultar Cliente" />
+            <Button id="btnConsultClient" layoutX="533.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnConsultClient" prefHeight="39.0" prefWidth="170.0" text="Escolher Player" />
          </children>
       </Pane>
    </children>
