@@ -15,8 +15,26 @@ public class ChooseClothingSaleController {
     private Button btnBackHome;
 
     @FXML
-    private void btnConsultSale(ActionEvent event) {
+    private void btnConsultSale() throws Exception {
+        if(ChooseClothingSale == null || !ChooseClothingSale.isShowing()) {
+            Parent consultClothingSale = FXMLLoader.load(
+                getClass().getResource(
+                    "/br/senac/onRuby/ChooseClothingSale/ConsultClothingSale/ConsultClothingSale.fxml"
+                )
+            );
+            
+            ChooseClothingSale = new Stage();
+            Scene scene = new Scene(consultClothingSale);
+
+            ChooseClothingSale.setScene(scene);
+            ChooseClothingSale.setTitle("Consultar Venda");
+            ChooseClothingSale.show();
+        }
+        
+        Stage stage = (Stage) btnBackHome.getScene().getWindow();
+        stage.close();
     }
+    
 
     @FXML
     private void btnRegisterSale(ActionEvent event) {
@@ -42,5 +60,4 @@ public class ChooseClothingSaleController {
         Stage stage = (Stage) btnBackHome.getScene().getWindow();
         stage.close();
     }
-    
 }
