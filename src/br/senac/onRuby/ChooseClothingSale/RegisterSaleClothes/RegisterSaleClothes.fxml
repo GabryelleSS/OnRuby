@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="780.0" stylesheets="@RegisterSaleClothes.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.ChooseClothingSale.RegisterSaleClothes.RegisterSaleClothesController">
+   <children>
+      <Pane prefHeight="500.0" prefWidth="780.0">
+         <children>
+            <Pane id="headerRegisterSaleClothes" prefHeight="67.0" prefWidth="780.0">
+               <children>
+                  <ImageView fitHeight="67.0" fitWidth="98.0" layoutX="688.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icon/logotipo-v4.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="285.0" layoutY="9.0" prefHeight="50.0" prefWidth="314.0" text="Cadastro de Roupas" textFill="WHITE">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane id="menuRegisterSaleClothes" prefHeight="500.0" prefWidth="164.0">
+               <children>
+                  <ImageView fitHeight="408.0" fitWidth="156.0" layoutX="7.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icon/pessoa_2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane id="bodyRegisterSaleClothes" layoutX="164.0" layoutY="67.0" prefHeight="434.0" prefWidth="618.0">
+               <children>
+                  <TextField layoutX="223.0" layoutY="124.0" prefHeight="25.0" prefWidth="198.0" promptText="104" />
+                  <ComboBox fx:id="clothingCategory" layoutX="223.0" layoutY="19.0" prefHeight="25.0" prefWidth="198.0" promptText="Selecione a categoria" />
+                  <TextField layoutX="223.0" layoutY="174.0" prefHeight="25.0" prefWidth="198.0" promptText="R$ 49,90" />
+                  <TextField layoutX="223.0" layoutY="288.0" prefHeight="25.0" prefWidth="198.0" promptText="Monteiro Lobato" />
+                  <ComboBox fx:id="sizeClothing" layoutX="223.0" layoutY="231.0" prefHeight="25.0" prefWidth="198.0" promptText="Tamanhos" />
+                  <TextField layoutX="223.0" layoutY="71.0" prefHeight="25.0" prefWidth="198.0" promptText="Camiseta Baby Look Rick &amp; Morty Nave" />
+                  <Label layoutX="14.0" layoutY="18.0" text="Categoria:" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="70.0" text="Nome do Produto:" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="123.0" text="Quantidade de Peças:" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="173.0" text="Preço Unitário" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="230.0" text="Tamanho" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="287.0" text="Nome do Fornecedor" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="83.0" fitWidth="74.0" layoutX="530.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icon/costume-clothes.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="124.0" fitWidth="74.0" layoutX="530.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icon/hanger.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="79.0" fitWidth="74.0" layoutX="445.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icon/price-tag.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="94.0" fitWidth="92.0" layoutX="436.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icon/tshirt.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnBackChooseClothes" layoutX="556.0" layoutY="395.0" mnemonicParsing="false" onAction="#btnBackChooseClothes" text="Voltar" />
+                  <Button layoutX="276.0" layoutY="331.0" mnemonicParsing="false" text="Cadastrar" />
+                  <Button layoutX="368.0" layoutY="331.0" mnemonicParsing="false" text="Limpar" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

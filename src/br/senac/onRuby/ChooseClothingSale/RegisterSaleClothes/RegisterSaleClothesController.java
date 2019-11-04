@@ -1,4 +1,4 @@
-package br.senac.onRuby.ChooseClothingSale.ConsultClothingSale;
+package br.senac.onRuby.ChooseClothingSale.RegisterSaleClothes;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,21 +6,21 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
-public class ConsultClothingSaleController {
+public class RegisterSaleClothesController {
     
-    private Stage ConsultClothingSale;
-
+    private Stage RegisterClothingSale;
+    
     @FXML
-    private Button btnBackToChooseClothingSale;
+    private Button btnBackChooseClothes;
     @FXML
     private ComboBox<String> clothingCategory;
+    @FXML
+    private ComboBox<String> sizeClothing;
     
     public void initialize() {
-         
          
         clothingCategory.getItems().addAll(
             "Acessório",
@@ -41,26 +41,34 @@ public class ConsultClothingSaleController {
             "Saias",
             "Vestidos"
         );
+        
+        sizeClothing.getItems().addAll(
+            "PP",
+            "P",
+            "M",
+            "G",
+            "GG"
+        );
      }
 
     @FXML
-    private void btnBackToChooseClothingSale() throws Exception {
-        if(ConsultClothingSale == null || !ConsultClothingSale.isShowing()) {
+    private void btnBackChooseClothes() throws Exception {
+        if(RegisterClothingSale == null || !RegisterClothingSale.isShowing()) {
             Parent chooseClothingSale = FXMLLoader.load(
                 getClass().getResource(
                     "/br/senac/onRuby/ChooseClothingSale/ChooseClothingSale.fxml"
                 )
             );
             
-            ConsultClothingSale = new Stage();
+            RegisterClothingSale = new Stage();
             Scene scene = new Scene(chooseClothingSale);
 
-            ConsultClothingSale.setScene(scene);
-            ConsultClothingSale.setTitle("Escolha o que deseja fazer!");
-            ConsultClothingSale.show();
+            RegisterClothingSale.setScene(scene);
+            RegisterClothingSale.setTitle("Escolha o que deseja fazer!");
+            RegisterClothingSale.show();
         }
         
-        Stage stage = (Stage) btnBackToChooseClothingSale.getScene().getWindow();
+        Stage stage = (Stage) btnBackChooseClothes.getScene().getWindow();
         stage.close();
     }
     
