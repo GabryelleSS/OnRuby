@@ -5,6 +5,7 @@ import java.time.LocalDate;
 public class DataRegisterClothes {
     
     private Integer idClothes;
+    private String categoryClothes;
     private String nameClothes;
     private int quantityClothes;
     private float unitPrice;
@@ -17,6 +18,14 @@ public class DataRegisterClothes {
 
     public void setIdClothes(Integer idClothes) {
         this.idClothes = idClothes;
+    }
+    
+    public String getCategoryClothes() {
+        return categoryClothes;
+    }
+
+    public void setCategoryClothes(String nameClothes) {
+        this.categoryClothes = categoryClothes;
     }
     
     public String getNameClothes() {
@@ -47,7 +56,7 @@ public class DataRegisterClothes {
         return sizeClothes;
     }
 
-    public void setUnitPrice(String sizeClothes) {
+    public void setSizeClothes(String sizeClothes) {
         this.sizeClothes = sizeClothes;
     }
     

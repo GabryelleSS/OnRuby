@@ -1,5 +1,6 @@
 package br.senac.onRuby.ChooseClothingSale.RegisterSaleClothes;
 
+import br.senac.onRuby.ChooseClothingSale.RegisterSaleClothes.DataRegisterClothes;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
