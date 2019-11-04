@@ -9,7 +9,7 @@ public class MockClothing {
     
     private static List<DataRegisterClothes> listClothes = new ArrayList<DataRegisterClothes>();
     
-    public static void insertClothes(DataRegisterClothes dataRegisterClothes) throws Exception {
+    public static void clothesInsert(DataRegisterClothes dataRegisterClothes) throws Exception {
         dataRegisterClothes.setIdClothes(resultClothes++);
         listClothes.add(dataRegisterClothes);
     }
