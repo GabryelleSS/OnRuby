@@ -35,21 +35,20 @@ public class ChooseClothingSaleController {
         stage.close();
     }
     
-
     @FXML
-    private void btnRegisterSale() throws Exception {
+    private void btnRegisterClothes() throws Exception {
         if(ChooseClothingSale == null || !ChooseClothingSale.isShowing()) {
-            Parent registerClothesSale = FXMLLoader.load(
+            Parent registerClothes = FXMLLoader.load(
                 getClass().getResource(
                     "/br/senac/onRuby/ChooseClothingSale/RegisterSaleClothes/RegisterSaleClothes.fxml"
                 )
             );
             
             ChooseClothingSale = new Stage();
-            Scene scene = new Scene(registerClothesSale);
+            Scene scene = new Scene(registerClothes);
 
             ChooseClothingSale.setScene(scene);
-            ChooseClothingSale.setTitle("Cadastrar Roupas");
+            ChooseClothingSale.setTitle("Cadastrar Venda");
             ChooseClothingSale.show();
         }
         

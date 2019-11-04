@@ -60,7 +60,7 @@
                      </children>
                   </Pane>
                   <Button id="btnBackHome" fx:id="btnBackHome" layoutX="504.0" layoutY="360.0" mnemonicParsing="false" onAction="#btnBackHome" prefHeight="37.0" prefWidth="88.0" text="Voltar" />
-                  <Button id="btnRegisterSale" layoutX="65.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnRegisterSale" prefHeight="36.0" prefWidth="167.0" text="Cadastrar Venda" />
+                  <Button id="btnRegisterSale" layoutX="65.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnRegisterClothes" prefHeight="36.0" prefWidth="167.0" text="Cadastrar Venda" />
                </children>
             </Pane>
          </children>

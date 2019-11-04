@@ -1,4 +1,4 @@
-package br.senac.onRuby.ClientRegistration;
+package br.senac.onRuby.ChooseClientView.ClientRegistration;
 
 import java.net.URL;
 import java.util.ResourceBundle;

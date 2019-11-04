@@ -48,9 +48,9 @@
                </children></Pane>
             <Pane id="paneImageAction" layoutX="361.0" layoutY="34.0" prefHeight="144.0" prefWidth="168.0" stylesheets="@Home.css">
                <children>
-                  <ImageView fitHeight="122.0" fitWidth="128.0" layoutX="20.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="110.0" fitWidth="110.0" layoutX="29.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../icon/bau-fechado.png" />
+                        <Image url="@../../icon/treasure.png" />
                      </image>
                   </ImageView>
                </children></Pane>
