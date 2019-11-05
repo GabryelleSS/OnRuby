@@ -1,5 +1,7 @@
 package br.senac.onRuby.ChooseClientView.ClientRegistration;
 
+import br.senac.onRuby.ChooseClientView.Client;
+import br.senac.onRuby.Mock.MockClient;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -15,7 +17,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class ClientRegistrationController implements Initializable {
+public class ClientRegistrationController {
 
     private Stage ClientRegistrationStage;
     @FXML
@@ -51,25 +53,23 @@ public class ClientRegistrationController implements Initializable {
     @FXML
     private Label titleNotificationWarning;
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        
-    }    
+    private MockClient mock = new MockClient();
+    private Client client = new Client();
 
     @FXML
-    private void registerCustomer(ActionEvent event) {
-        String firstNameClient = fieldFirstName.getText();
-        String lastNameClient = fieldLastName.getText();
+    private void registerCustomer(ActionEvent event) throws Exception {
+        client.setFirstName(fieldFirstName.getText());
+        client.setLastName(fieldLastName.getText());
         
-        boolean checkFirstNameEmpty = firstNameClient.trim().isEmpty();
-        boolean checkLastNameEmpty = lastNameClient.trim().isEmpty();
+        boolean checkFirstNameEmpty = client.getFirstName().trim().isEmpty();
+        boolean checkLastNameEmpty = client.getLastName().trim().isEmpty();
         
-        if(firstNameClient == null || checkFirstNameEmpty) {
+        if(client.getFirstName() == null || checkFirstNameEmpty) {
             titleNotificationWarning.setText("Cuidado!");
             contentNotificationWarning.setText("O campo \"Nome\" é obrigatório, por gentileza preencha!");
             paneNotificationWarning.setVisible(true);
         }
-        else if(lastNameClient == null || checkLastNameEmpty) {
+        else if(client.getLastName() == null || checkLastNameEmpty) {
             titleNotificationWarning.setText("Cuidado!");
             contentNotificationWarning.setText("O campo \"Sobrenome\" é obrigatório, por gentileza preencha!");
             paneNotificationWarning.setVisible(true);
@@ -82,6 +82,8 @@ public class ClientRegistrationController implements Initializable {
             fieldFirstName.setText("");
             fieldLastName.setText("");
         }
+        
+        mock.insertClient(client);
     }
 
     @FXML

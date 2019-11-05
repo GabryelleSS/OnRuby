@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.ProductRegistration.ProductRegistrationController">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.StockRegistration.StockRegistrationController">
    <children>
       <Pane id="illustration" prefHeight="450.0" prefWidth="275.0" stylesheets="@ProductRegistration.css">
          <children>
@@ -22,7 +22,7 @@
             </ImageView>
             <Pane id="paneDecoration" layoutX="-5.0" prefHeight="54.0" prefWidth="286.0">
                <children>
-                  <Label layoutX="29.0" layoutY="10.0" prefHeight="35.0" prefWidth="229.0" text="Cadastro de Produto" textFill="WHITE">
+                  <Label layoutX="29.0" layoutY="10.0" prefHeight="35.0" prefWidth="229.0" text="Cadastro de Produto">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -50,7 +50,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button id="btnBack" layoutX="-24.0" layoutY="392.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="49.0" stylesheets="@ProductRegistration.css" text="&lt;" textFill="WHITE" />
+            <Button id="btnBack" fx:id="btnBackHome" layoutX="-24.0" layoutY="392.0" mnemonicParsing="false" onAction="#btnBackHome" prefHeight="46.0" prefWidth="49.0" stylesheets="@ProductRegistration.css" text="&lt;" textFill="WHITE" />
          </children></Pane>
    </children>
 </AnchorPane>

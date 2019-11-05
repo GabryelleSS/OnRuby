@@ -9,7 +9,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class ChooseClientViewController {
-    
+
     private Stage ChooseClientViewStage;
     private Stage clientStage;
     @FXML
@@ -21,13 +21,13 @@ public class ChooseClientViewController {
 
     @FXML
     private void btnRegisterClient() throws Exception {
-        if(clientStage == null || !clientStage.isShowing()) {
+        if (clientStage == null || !clientStage.isShowing()) {
             Parent ClientRegistration = FXMLLoader.load(
-                getClass().getResource(
-                    "/br/senac/onRuby/ClientRegistration/ClientRegistration.fxml"
-                )
+                    getClass().getResource(
+                            "/br/senac/onRuby/ChooseClientView/ClientRegistration/ClientRegistration.fxml"
+                    )
             );
-            
+
             clientStage = new Stage();
             Scene scene = new Scene(ClientRegistration);
 
@@ -35,20 +35,20 @@ public class ChooseClientViewController {
             clientStage.setTitle("Cadastro de Cliente");
             clientStage.show();
         }
-        
+
         Stage stage = (Stage) btnCloseRegisterClient.getScene().getWindow();
-        stage.close();        
+        stage.close();
     }
 
     @FXML
     private void btnConsultClient() throws Exception {
-        if(clientStage == null || !clientStage.isShowing()) {
+        if (clientStage == null || !clientStage.isShowing()) {
             Parent ClientRegistration = FXMLLoader.load(
-                getClass().getResource(
-                    "/br/senac/onRuby/ConsultClient/ConsultClient.fxml"
-                )
+                    getClass().getResource(
+                            "/br/senac/onRuby/ChooseClientView/ConsultClient/ConsultClient.fxml"
+                    )
             );
-            
+
             clientStage = new Stage();
             Scene scene = new Scene(ClientRegistration);
 
@@ -56,20 +56,20 @@ public class ChooseClientViewController {
             clientStage.setTitle("Registro de Cliente");
             clientStage.show();
         }
-        
+
         Stage stage = (Stage) btnCloseConsultClient.getScene().getWindow();
         stage.close();
     }
 
     @FXML
     private void btnBackHome() throws Exception {
-        if(ChooseClientViewStage == null || !ChooseClientViewStage.isShowing()) {
+        if (ChooseClientViewStage == null || !ChooseClientViewStage.isShowing()) {
             Parent chooseClient = FXMLLoader.load(
-                getClass().getResource(
-                    "/br/senac/onRuby/Home/Home.fxml"
-                )
+                    getClass().getResource(
+                            "/br/senac/onRuby/Home/Home.fxml"
+                    )
             );
-            
+
             ChooseClientViewStage = new Stage();
             Scene scene = new Scene(chooseClient);
 
@@ -77,9 +77,9 @@ public class ChooseClientViewController {
             ChooseClientViewStage.setTitle("Home");
             ChooseClientViewStage.show();
         }
-        
+
         Stage stage = (Stage) btnBackHome.getScene().getWindow();
         stage.close();
     }
-    
+
 }

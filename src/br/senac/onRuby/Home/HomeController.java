@@ -66,7 +66,24 @@ public class HomeController {
     }
 
     @FXML
-    private void btnOpenStockView(ActionEvent event) {
+    private void btnOpenStockView() throws Exception {
+        if(homeStage == null || !homeStage.isShowing()) {
+            Parent stockRegistration = FXMLLoader.load(
+                getClass().getResource(
+                    "/br/senac/onRuby/StockRegistration/StockRegistration.fxml"
+                )
+            );
+            
+            homeStage = new Stage();
+            Scene scene = new Scene(stockRegistration);
+            
+            homeStage.setScene(scene);
+            homeStage.setTitle("Estoque");
+            homeStage.show();
+        }
+       
+        Stage stage = (Stage) btnCloseHome.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
