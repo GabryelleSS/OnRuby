@@ -1,7 +1,6 @@
 package br.senac.onRuby.ChooseClientView.ConsultClient;
 
 import br.senac.onRuby.ChooseClientView.Client;
-import br.senac.onRuby.Mock.MockClient;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.collections.FXCollections;
@@ -26,7 +25,6 @@ public class ConsultClientController {
     private Button btnBackChooseClient;
 
     private List<Client> listClient = new ArrayList<Client>();
-    private MockClient mock = new MockClient();
     
     @FXML
     private TableView<Client> tabletClient;
@@ -40,21 +38,24 @@ public class ConsultClientController {
     public void initialize() {
         //Configura as colunas da tabela
         columCPF.setCellValueFactory(
-                new PropertyValueFactory("columCPF")
-            );        
+            new PropertyValueFactory("CPF")
+        );        
         columName.setCellValueFactory(
-                new PropertyValueFactory("columName")
-            );
+            new PropertyValueFactory("firstName")
+        );
         
         //Configura os elementos do combo
         columPhone.setCellValueFactory(
-                new PropertyValueFactory("columPhone")
-            );
+            new PropertyValueFactory("phone")
+        );
     }
     
     @FXML
     private void btnSearchClient(ActionEvent event) throws Exception {
-        listClient = mock.list();
+        tabletClient.getItems().clear(); 
+        
+        List result = listSearchClient();
+        
         tabletClient.setItems(FXCollections.observableArrayList(listClient));       
     }
 
@@ -82,6 +83,24 @@ public class ConsultClientController {
             Stage stage = (Stage) btnBackChooseClient.getScene().getWindow();
             stage.close();
         }
+    }
+    
+    private List listSearchClient() {
+        List result;
+        
+        try {
+            if(txtPesquisa.getText().equals("")) {
+                result = DaoCliente.listar();
+            }
+            else {
+                result = DaoCliente.procurar(txtPesquisa.getText());                
+            }
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+            result = null;
+        }
+        return result;
     }
     
 }

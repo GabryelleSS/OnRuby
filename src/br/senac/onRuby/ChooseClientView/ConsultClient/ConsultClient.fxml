@@ -31,7 +31,7 @@
                         <Image url="@../../../icon/speech-bubble.png" />
                      </image>
                   </ImageView>
-                  <Label id="tilteConsultClient" layoutX="233.0" layoutY="17.0" stylesheets="@../ClientRegistration/ClientRegistration.css" text="Consultar Players Registrados" textFill="WHITE">
+                  <Label id="tilteConsultClient" layoutX="233.0" layoutY="17.0" stylesheets="@../ClientRegistration/ClientRegistration.css" text="Consultar Clientes Registrados" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>

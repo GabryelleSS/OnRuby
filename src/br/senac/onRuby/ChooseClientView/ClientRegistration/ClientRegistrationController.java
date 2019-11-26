@@ -1,7 +1,6 @@
 package br.senac.onRuby.ChooseClientView.ClientRegistration;
 
 import br.senac.onRuby.ChooseClientView.Client;
-import br.senac.onRuby.Mock.MockClient;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -11,8 +10,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -24,6 +26,8 @@ public class ClientRegistrationController {
     private TextField fieldFirstName;
     @FXML
     private TextField fieldLastName;
+    @FXML
+    private DatePicker fieldDateBirth;
     @FXML
     private TextField fieldRG;
     @FXML
@@ -52,9 +56,17 @@ public class ClientRegistrationController {
     private Text contentNotificationWarning;
     @FXML
     private Label titleNotificationWarning;
+    @FXML
+    private ComboBox<String> fieldGender;
 
-    private MockClient mock = new MockClient();
     private Client client = new Client();
+    
+    public void initialize() {
+        fieldGender.getItems().addAll(
+            "Feminino",
+            "Masculino"
+        );
+    }
 
     @FXML
     private void registerCustomer(ActionEvent event) throws Exception {
@@ -82,8 +94,6 @@ public class ClientRegistrationController {
             fieldFirstName.setText("");
             fieldLastName.setText("");
         }
-        
-        mock.insertClient(client);
     }
 
     @FXML

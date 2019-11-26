@@ -29,7 +29,7 @@
             </ImageView>
             <Pane id="paneSearchClient" layoutX="145.0" layoutY="207.0" prefHeight="200.0" prefWidth="170.0">
                <children>
-                  <Button id="btnRegisterClient" fx:id="btnCloseRegisterClient" layoutY="181.0" mnemonicParsing="false" onAction="#btnRegisterClient" prefHeight="39.0" prefWidth="170.0" text="Criar Player" />
+                  <Button id="btnRegisterClient" fx:id="btnCloseRegisterClient" layoutY="181.0" mnemonicParsing="false" onAction="#btnRegisterClient" prefHeight="39.0" prefWidth="170.0" text="Cadastrar Cliente" />
                   <ImageView fitHeight="111.0" fitWidth="137.0" layoutX="30.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../icon/account.png" />
@@ -47,7 +47,7 @@
                   </ImageView>
                </children>
             </Pane>
-            <Button id="btnConsultClient" fx:id="btnCloseConsultClient" layoutX="533.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnConsultClient" prefHeight="39.0" prefWidth="170.0" text="Escolher Player" />
+            <Button id="btnConsultClient" fx:id="btnCloseConsultClient" layoutX="533.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnConsultClient" prefHeight="39.0" prefWidth="170.0" text="Buscar Cliente" />
          </children>
       </Pane>
    </children>

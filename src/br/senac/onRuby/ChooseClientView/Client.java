@@ -4,18 +4,11 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Client {
-
-    public static List list() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public static List search(String text) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     private Integer id;
     private String firstName;
     private String lastName;
+    private String dateBirth;
     private int RG;
     private int CPF;
     private int phone; 
@@ -50,6 +43,15 @@ public class Client {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+    
+    public String getDateBirth() {
+        return dateBirth;
+    }
+
+    public void setDateBirth(String dateBirth) {
+        this.dateBirth = dateBirth;
+    }
+    
     
     public int getRG() {
         return RG;

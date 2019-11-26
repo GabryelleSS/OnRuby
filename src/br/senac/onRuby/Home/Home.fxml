@@ -54,10 +54,10 @@
                      </image>
                   </ImageView>
                </children></Pane>
-            <Button id="btnHome" fx:id="btnClient" layoutX="5.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenClientView" prefHeight="38.0" prefWidth="168.0" text="Players" textFill="WHITE" />
-            <Button id="btnHome" layoutX="185.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenClothingSale" prefHeight="41.0" prefWidth="168.0" stylesheets="@Home.css" text="Baú de Tesouro" />
-            <Button id="btnHome" layoutX="361.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenStockView" prefHeight="41.0" prefWidth="168.0" stylesheets="@Home.css" text="Inventário" />
-            <Button id="btnHome" layoutX="539.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenReportView" prefHeight="41.0" prefWidth="168.0" text="Mapa do Tesouro" />
+            <Button id="btnHome" fx:id="btnClient" layoutX="5.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenClientView" prefHeight="38.0" prefWidth="168.0" text="Cliente" textFill="WHITE" />
+            <Button id="btnHome" layoutX="185.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenClothingSale" prefHeight="41.0" prefWidth="168.0" stylesheets="@Home.css" text="Venda" />
+            <Button id="btnHome" layoutX="361.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenStockView" prefHeight="41.0" prefWidth="168.0" stylesheets="@Home.css" text="Estoque" />
+            <Button id="btnHome" layoutX="539.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenReportView" prefHeight="41.0" prefWidth="168.0" text="Relatório" />
          </children>
       </Pane>
       <Label id="titleStore" layoutX="100.0" layoutY="107.0" text="Nome da loja" />
