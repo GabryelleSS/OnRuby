@@ -1,15 +1,19 @@
 package br.senac.onRuby.ChooseClientView.ConsultClient;
 
 import br.senac.onRuby.ChooseClientView.Client;
+import br.senac.onRuby.db.DaoClient;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -33,31 +37,100 @@ public class ConsultClientController {
     @FXML
     private TableColumn<Client, String> columName;
     @FXML
-    private TableColumn<Client, String> columPhone;
+    private TableColumn<Client, String> columPhone;    
+    @FXML
+    private Button btnEdit;
+    
+    private boolean editMode = false;
+    private Client clientEdit;
     
     public void initialize() {
-        //Configura as colunas da tabela
+        
         columCPF.setCellValueFactory(
             new PropertyValueFactory("CPF")
         );        
         columName.setCellValueFactory(
             new PropertyValueFactory("firstName")
         );
-        
-        //Configura os elementos do combo
         columPhone.setCellValueFactory(
             new PropertyValueFactory("phone")
         );
     }
     
     @FXML
-    private void btnSearchClient(ActionEvent event) throws Exception {
+    private void btnSearchClient(ActionEvent event) {
         tabletClient.getItems().clear(); 
         
         List result = listSearchClient();
         
-        tabletClient.setItems(FXCollections.observableArrayList(listClient));       
+        if(result != null) {
+            tabletClient.setItems(
+                FXCollections.observableArrayList(result)
+            );
+        } 
     }
+    
+//    @FXML
+//    private void editClient(ActionEvent event) {
+//        Client client = tabletClient.getSelectionModel().getSelectedItem();
+//        
+//        if(client != null) {
+//            
+//            editMode = true;
+//            
+//            clientEdit = client;
+//            
+//            txtCpf.setText(clientEdit.getCpf());
+//            txtNome.setText(clientEdit.getNome());
+//            txtSobrenome.setText(clientEdit.getSobrenome());
+//            dpDataNasc.setValue(clientEdit.getDataNascimento());
+//            comboGenero.setValue(clientEdit.getGenero());
+//            
+//            txtCpf.requestFocus();
+//            
+//            btnSalvar.setText("Salvar");
+//        }
+//        else {
+//            Alert alert = new Alert(AlertType.ERROR);
+//            alert.setTitle("Erro");
+//            alert.setContentText("É necessário selecionar um cliente");
+//            alert.showAndWait();
+//        }
+//    }
+    
+//    @FXML
+//    private void acaoExcluir(ActionEvent event) {
+//        Client client = tabletClient.getSelectionModel().getSelectedItem();
+//        
+//        if(client != null) {
+//            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+//            alert.setTitle("Excluir Cliente");
+//            alert.setContentText("Excluir o cliente " + client.getFirstName());
+//            
+//            Optional<ButtonType> result = alert.showAndWait();
+//            
+//            if(result.get() == ButtonType.OK){
+//                try {
+//                    excluirCliente(client);
+//                    acaoPesquisar(event);
+//                }
+//                catch(Exception e) {
+//                    e.printStackTrace();
+//                    Alert alertErro = new Alert(Alert.AlertType.ERROR);
+//                    alertErro.setTitle("Erro");
+//                    alertErro.setContentText("Ocorreu um erro ao excluir"
+//                            + " o cliente");
+//                    alertErro.showAndWait();
+//                }
+//            }
+//        }
+//        else {
+//            Alert alert = new Alert(Alert.AlertType.ERROR);
+//            alert.setTitle("Erro");
+//            alert.setContentText("É necessário selecionar um cliente");
+//            alert.showAndWait();
+//        }
+//    }
 
     @FXML
     private void btnClearFieldSearch(ActionEvent event) {
@@ -87,13 +160,13 @@ public class ConsultClientController {
     
     private List listSearchClient() {
         List result;
-        
+      
         try {
-            if(txtPesquisa.getText().equals("")) {
-                result = DaoCliente.listar();
+            if(fielSearchClient.getText().equals("")) {
+                result = DaoClient.listar();
             }
             else {
-                result = DaoCliente.procurar(txtPesquisa.getText());                
+                result = DaoClient.procurar(fielSearchClient.getText());                
             }
         }
         catch(Exception e) {
@@ -102,5 +175,8 @@ public class ConsultClientController {
         }
         return result;
     }
-    
+
+    @FXML
+    private void btnEdit(ActionEvent event) {
+    }
 }

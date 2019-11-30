@@ -1,16 +1,15 @@
 package br.senac.onRuby.ChooseClientView;
 
 import java.time.LocalDate;
-import java.util.List;
 
 public class Client {
     
     private Integer id;
     private String firstName;
     private String lastName;
-    private String dateBirth;
-    private int RG;
-    private int CPF;
+    private LocalDate dateBirth;
+    private String RG;
+    private String CPF;
     private int phone; 
     private int CEP; 
     private String street; 
@@ -19,6 +18,7 @@ public class Client {
     private String city; 
     private String state; 
     private String complement;
+    private String gender;
     
     public Integer getIdClient() {
         return id;
@@ -44,28 +44,27 @@ public class Client {
         this.lastName = lastName;
     }
     
-    public String getDateBirth() {
+    public LocalDate getDateBirth() {
         return dateBirth;
     }
 
-    public void setDateBirth(String dateBirth) {
+    public void setDateBirth(LocalDate dateBirth) {
         this.dateBirth = dateBirth;
     }
     
-    
-    public int getRG() {
+    public String getRG() {
         return RG;
     }
 
-    public void setRG(int RG) {
+    public void setRG(String RG) {
         this.RG = RG;
     }
     
-    public int getCPF() {
+    public String getCPF() {
         return CPF;
     }
 
-    public void setCPF(int CPF) {
+    public void setCPF(String CPF) {
         this.CPF = CPF;
     }
     
@@ -131,5 +130,13 @@ public class Client {
 
     public void setComplement(String complement) {
         this.complement = complement;
+    }
+    
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String complement) {
+        this.gender = gender;
     }
 }

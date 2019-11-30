@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.ChooseClientView.ConsultClient.ConsultClientController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.ChooseClientView.ConsultClient.ConsultClientController">
    <children>
       <Pane id="paneConsultClient" prefHeight="500.0" prefWidth="780.0" stylesheets="@ConsultClient.css">
          <children>
@@ -58,6 +58,7 @@
             <Button id="btnSearchClient" layoutX="537.0" layoutY="106.0" mnemonicParsing="false" onAction="#btnSearchClient" prefHeight="33.0" prefWidth="82.0" text="Pesquisar" />
             <Button id="btnClearFieldSearch" layoutX="645.0" layoutY="106.0" mnemonicParsing="false" onAction="#btnClearFieldSearch" prefHeight="33.0" prefWidth="69.0" text="Limpar" />
             <Button id="btnBackChooseClient" fx:id="btnBackChooseClient" layoutX="684.0" layoutY="453.0" mnemonicParsing="false" onAction="#btnBackChooseClient" prefHeight="33.0" prefWidth="82.0" text="Voltar" />
+            <Button id="btnBackChooseClient" fx:id="btnEdit" layoutX="589.0" layoutY="453.0" mnemonicParsing="false" onAction="#btnEdit" prefHeight="33.0" prefWidth="82.0" text="Editar" />
          </children>
       </Pane>
    </children>
