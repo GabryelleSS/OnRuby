@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="780.0" stylesheets="@RegisterProduct.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.ChooseProductView.RegisterProduct.RegisterProductController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="780.0" stylesheets="@RegisterSaleClothes.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.ChooseClothingSale.RegisterSaleClothes.RegisterSaleClothesController">
    <children>
       <Pane prefHeight="500.0" prefWidth="780.0">
          <children>
-            <Pane id="headerRegisterSaleClothes" prefHeight="67.0" prefWidth="780.0" stylesheets="@RegisterProduct.css">
+            <Pane id="headerRegisterSaleClothes" prefHeight="67.0" prefWidth="780.0">
                <children>
                   <ImageView fitHeight="67.0" fitWidth="98.0" layoutX="688.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -28,7 +28,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane id="menuRegisterSaleClothes" prefHeight="500.0" prefWidth="164.0" stylesheets="@RegisterProduct.css">
+            <Pane id="menuRegisterSaleClothes" prefHeight="500.0" prefWidth="164.0">
                <children>
                   <ImageView fitHeight="408.0" fitWidth="156.0" layoutX="7.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -37,34 +37,40 @@
                   </ImageView>
                </children>
             </Pane>
-            <Pane id="bodyRegisterSaleClothes" layoutX="164.0" layoutY="67.0" prefHeight="434.0" prefWidth="618.0" stylesheets="@RegisterProduct.css">
+            <Pane id="bodyRegisterSaleClothes" layoutX="164.0" layoutY="67.0" prefHeight="434.0" prefWidth="618.0">
                <children>
-                  <TextField id="fieldRegisterProduct" layoutX="223.0" layoutY="95.0" prefHeight="25.0" prefWidth="198.0" />
-                  <ComboBox id="fieldRegisterProduct" fx:id="productCategory" layoutX="223.0" layoutY="19.0" prefHeight="25.0" prefWidth="198.0" promptText="Selecione a categoria" />
-                  <TextField id="fieldRegisterProduct" layoutX="223.0" layoutY="136.0" prefHeight="25.0" prefWidth="198.0" />
-                  <ComboBox id="fieldRegisterProduct" fx:id="sizeProduct" layoutX="223.0" layoutY="214.0" prefHeight="25.0" prefWidth="198.0" promptText="Selecione o tamanho" />
-                  <TextField id="fieldRegisterProduct" layoutX="223.0" layoutY="57.0" prefHeight="25.0" prefWidth="198.0" />
+                  <TextField layoutX="223.0" layoutY="124.0" prefHeight="25.0" prefWidth="198.0" promptText="104" />
+                  <ComboBox fx:id="clothingCategory" layoutX="223.0" layoutY="19.0" prefHeight="25.0" prefWidth="198.0" promptText="Selecione a categoria" />
+                  <TextField layoutX="223.0" layoutY="174.0" prefHeight="25.0" prefWidth="198.0" promptText="R$ 49,90" />
+                  <TextField layoutX="223.0" layoutY="288.0" prefHeight="25.0" prefWidth="198.0" promptText="Monteiro Lobato" />
+                  <ComboBox fx:id="sizeClothing" layoutX="223.0" layoutY="231.0" prefHeight="25.0" prefWidth="198.0" promptText="Tamanhos" />
+                  <TextField layoutX="223.0" layoutY="71.0" prefHeight="25.0" prefWidth="198.0" promptText="Camiseta Baby Look Rick &amp; Morty Nave" />
                   <Label layoutX="14.0" layoutY="18.0" text="Categoria:" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="14.0" layoutY="56.0" text="Nome do Produto:" textFill="WHITE">
+                  <Label layoutX="14.0" layoutY="70.0" text="Nome do Produto:" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="14.0" layoutY="94.0" text="Quantidade de Peças:" textFill="WHITE">
+                  <Label layoutX="14.0" layoutY="123.0" text="Quantidade de Peças:" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="14.0" layoutY="135.0" text="Preço Unitário" textFill="WHITE">
+                  <Label layoutX="14.0" layoutY="173.0" text="Preço Unitário" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="14.0" layoutY="213.0" text="Tamanho" textFill="WHITE">
+                  <Label layoutX="14.0" layoutY="230.0" text="Tamanho" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="287.0" text="Nome do Fornecedor" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -89,15 +95,9 @@
                         <Image url="@../../../icon/tshirt.png" />
                      </image>
                   </ImageView>
-                  <Button id="btnProductView" fx:id="btnBackChooseClothes" layoutX="556.0" layoutY="395.0" mnemonicParsing="false" onAction="#btnBackChooseProduct" text="Voltar" />
-                  <Button id="btnProductView" layoutX="368.0" layoutY="268.0" mnemonicParsing="false" text="Limpar" />
-                  <Button id="btnProductView" layoutX="289.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnSaveClothes" text="Cadastrar" />
-                  <Label layoutX="14.0" layoutY="174.0" text="Desconto" textFill="WHITE">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <ComboBox id="fieldRegisterProduct" fx:id="productDiscount" layoutX="223.0" layoutY="174.0" prefHeight="25.0" prefWidth="198.0" promptText="Selecione o desconto" />
+                  <Button fx:id="btnBackChooseClothes" layoutX="556.0" layoutY="395.0" mnemonicParsing="false" onAction="#btnBackChooseClothes" text="Voltar" />
+                  <Button layoutX="368.0" layoutY="331.0" mnemonicParsing="false" text="Limpar" />
+                  <Button layoutX="283.0" layoutY="331.0" mnemonicParsing="false" onAction="#btnSaveClothes" text="Cadastrar" />
                </children>
             </Pane>
          </children>
