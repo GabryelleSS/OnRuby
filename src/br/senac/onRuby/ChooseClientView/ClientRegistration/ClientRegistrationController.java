@@ -22,6 +22,7 @@ import javafx.stage.Stage;
 public class ClientRegistrationController {
 
     private Stage ClientRegistrationStage;
+    
     @FXML
     private TextField fieldFirstName;
     @FXML
@@ -45,8 +46,6 @@ public class ClientRegistrationController {
     @FXML
     private TextField fieldCity;
     @FXML
-    private TextField fieldStates;
-    @FXML
     private TextField fieldComplement;
     @FXML
     private Button btnBackChooseClient;
@@ -58,6 +57,10 @@ public class ClientRegistrationController {
     private Label titleNotificationWarning;
     @FXML
     private ComboBox<String> fieldGender;
+    @FXML
+    private ComboBox<String> fieldCivilStatus;
+    @FXML
+    private ComboBox<String> fieldState;
 
     private Client client = new Client();
     
@@ -65,6 +68,44 @@ public class ClientRegistrationController {
         fieldGender.getItems().addAll(
             "Feminino",
             "Masculino"
+        );
+        
+        fieldCivilStatus.getItems().addAll(
+            "Solteiro(a)",
+            "Casado(a)",
+            "Separado(a)",
+            "Divorciado(a)",
+            "Viúvo(a)"
+        );
+        
+        fieldState.getItems().addAll(
+            "AC",
+            "AL",
+            "AM",
+            "AP",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MG",
+            "MS",
+            "MT",
+            "PA",
+            "PB",
+            "PE",
+            "PI",
+            "PR",
+            "RJ",
+            "RN",
+            "RO",
+            "RR",
+            "RS",
+            "SC",
+            "SE",
+            "SP",
+            "TO"
         );
     }
 
@@ -120,6 +161,5 @@ public class ClientRegistrationController {
     @FXML
     private void btnConfirmNotificationWarning(ActionEvent event) {
         paneNotificationWarning.setVisible(false);
-    }
-    
+    }   
 }

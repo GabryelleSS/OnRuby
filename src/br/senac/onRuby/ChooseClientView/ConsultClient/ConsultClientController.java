@@ -23,13 +23,18 @@ import javafx.stage.Stage;
 public class ConsultClientController {
     
     private Stage consultClientStage;
+    private Stage editClientStage;
+    
+    private List<Client> listClient = new ArrayList<Client>();
+    
+    private boolean editMode = false;
+    
+    private Client clientEdit;
+    
     @FXML
     private TextField fielSearchClient;
     @FXML
-    private Button btnBackChooseClient;
-
-    private List<Client> listClient = new ArrayList<Client>();
-    
+    private Button btnBackChooseClient;    
     @FXML
     private TableView<Client> tabletClient;
     @FXML
@@ -39,10 +44,7 @@ public class ConsultClientController {
     @FXML
     private TableColumn<Client, String> columPhone;    
     @FXML
-    private Button btnEdit;
-    
-    private boolean editMode = false;
-    private Client clientEdit;
+    private Button btnSelectEdit;
     
     public void initialize() {
         
@@ -98,39 +100,42 @@ public class ConsultClientController {
 //        }
 //    }
     
-//    @FXML
-//    private void acaoExcluir(ActionEvent event) {
-//        Client client = tabletClient.getSelectionModel().getSelectedItem();
-//        
-//        if(client != null) {
-//            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-//            alert.setTitle("Excluir Cliente");
-//            alert.setContentText("Excluir o cliente " + client.getFirstName());
-//            
-//            Optional<ButtonType> result = alert.showAndWait();
-//            
-//            if(result.get() == ButtonType.OK){
-//                try {
-//                    excluirCliente(client);
-//                    acaoPesquisar(event);
-//                }
-//                catch(Exception e) {
-//                    e.printStackTrace();
-//                    Alert alertErro = new Alert(Alert.AlertType.ERROR);
-//                    alertErro.setTitle("Erro");
-//                    alertErro.setContentText("Ocorreu um erro ao excluir"
-//                            + " o cliente");
-//                    alertErro.showAndWait();
-//                }
-//            }
-//        }
-//        else {
-//            Alert alert = new Alert(Alert.AlertType.ERROR);
-//            alert.setTitle("Erro");
-//            alert.setContentText("É necessário selecionar um cliente");
-//            alert.showAndWait();
-//        }
-//    }
+    private void delete(ActionEvent event) {
+        Client client = tabletClient.getSelectionModel().getSelectedItem();
+        
+        if(client != null) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Excluir Cliente");
+            alert.setContentText("Excluir o cliente " + client.getFirstName());
+            
+            Optional<ButtonType> result = alert.showAndWait();
+            
+            if(result.get() == ButtonType.OK){
+                try {
+                    deleteClient(client);
+                    btnSearchClient(event);
+                }
+                catch(Exception e) {
+                    e.printStackTrace();
+                    Alert alertErro = new Alert(Alert.AlertType.ERROR);
+                    alertErro.setTitle("Erro");
+                    alertErro.setContentText("Ocorreu um erro ao excluir"
+                            + " o cliente");
+                    alertErro.showAndWait();
+                }
+            }
+        }
+        else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro");
+            alert.setContentText("É necessário selecionar um cliente");
+            alert.showAndWait();
+        }
+    }
+    
+    private void deleteClient(Client client) throws Exception {
+        DaoClient.excluir(client.getIdClient());
+    }
 
     @FXML
     private void btnClearFieldSearch(ActionEvent event) {
@@ -177,6 +182,23 @@ public class ConsultClientController {
     }
 
     @FXML
-    private void btnEdit(ActionEvent event) {
+    private void selectEditClient(ActionEvent event) throws Exception {        
+        if(editClientStage == null || !editClientStage.isShowing()) {
+            
+            Parent editClient = FXMLLoader.load(
+                getClass().getResource(
+                    "/br/senac/onRuby/ChooseClientView/EditClient/EditClient.fxml"
+                )
+            );
+
+            editClientStage = new Stage();
+            Scene scene = new Scene(editClient);
+
+            editClientStage.setScene(scene);
+            editClientStage.setTitle("Cliente");
+            editClientStage.show();
+            Stage stage = (Stage) btnBackChooseClient.getScene().getWindow();
+            stage.close();  
+        }
     }
 }
