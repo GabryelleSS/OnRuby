@@ -17,7 +17,9 @@
 
 #btnSearchClient, 
 #btnClearFieldSearch, 
-#btnBackChooseClient {
+#btnBackChooseClient,
+#btnDeleteClient,
+#btnEditClient {
     -fx-background-color: #239bda;
     -fx-border-radius: 10px;
     -fx-text-fill: #fff;

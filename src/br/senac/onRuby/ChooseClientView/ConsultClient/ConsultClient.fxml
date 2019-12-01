@@ -18,7 +18,7 @@
          <children>
             <Pane id="manuConsultClient" prefHeight="500.0" prefWidth="191.0">
                <children>
-                  <ImageView fitHeight="350.0" fitWidth="172.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="350.0" fitWidth="172.0" layoutX="4.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../icon/pessoa_4.png" />
                      </image>
@@ -57,8 +57,9 @@
             <TextField id="FieldSearchClient" fx:id="fielSearchClient" layoutX="220.0" layoutY="106.0" prefHeight="33.0" prefWidth="309.0" promptText="Digite o CPF, Nome ou Telefone" />
             <Button id="btnSearchClient" layoutX="537.0" layoutY="106.0" mnemonicParsing="false" onAction="#btnSearchClient" prefHeight="33.0" prefWidth="82.0" text="Pesquisar" />
             <Button id="btnClearFieldSearch" layoutX="645.0" layoutY="106.0" mnemonicParsing="false" onAction="#btnClearFieldSearch" prefHeight="33.0" prefWidth="69.0" text="Limpar" />
-            <Button id="btnBackChooseClient" fx:id="btnBackChooseClient" layoutX="684.0" layoutY="453.0" mnemonicParsing="false" onAction="#btnBackChooseClient" prefHeight="33.0" prefWidth="82.0" text="Voltar" />
-            <Button id="btnBackChooseClient" fx:id="btnSelectEdit" layoutX="576.0" layoutY="453.0" mnemonicParsing="false" onAction="#selectEditClient" prefHeight="33.0" prefWidth="95.0" text="Selecionar" />
+            <Button id="btnBackChooseClient" layoutX="684.0" layoutY="453.0" mnemonicParsing="false" onAction="#btnBackChooseClient" prefHeight="33.0" prefWidth="82.0" text="Voltar" />
+            <Button id="btnEditClient" layoutX="537.0" layoutY="396.0" mnemonicParsing="false" onAction="#btnEditClient" prefHeight="33.0" prefWidth="82.0" text="Editar" />
+            <Button id="btnDeleteClient" layoutX="630.0" layoutY="396.0" mnemonicParsing="false" onAction="#btnDeleteClient" prefHeight="33.0" prefWidth="82.0" text="Excluir" />
          </children>
       </Pane>
    </children>

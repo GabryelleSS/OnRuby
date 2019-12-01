@@ -1,8 +1,8 @@
-package br.senac.onRuby.ChooseClothingSale.RegisterSaleClothes;
+package br.senac.onRuby.ChooseProductView.RegisterProduct;
 
 import java.time.LocalDate;
 
-public class DataRegisterClothes {
+public class DataRegisterProduct {
     
     private Integer idClothes;
     private String categoryClothes;

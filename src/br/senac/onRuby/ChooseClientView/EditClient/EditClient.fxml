@@ -56,12 +56,12 @@
                </font>
             </Label>
             <Label id="customerRegistrationFields" layoutX="587.0" layoutY="93.0" stylesheets="@EditClient.css" text="Data de Nascimento" />
-            <DatePicker fx:id="fieldDateBirth" layoutX="588.0" layoutY="125.0" promptText="DD/MM/AAAA" />
+            <DatePicker id="customerInformation" fx:id="fieldDateBirth" layoutX="588.0" layoutY="125.0" promptText="DD/MM/AAAA" />
             <Label id="customerRegistrationFields" layoutX="592.0" layoutY="250.0" stylesheets="@EditClient.css" text="CEP" />
             <TextField id="customerInformation" fx:id="filedCEP" layoutX="592.0" layoutY="277.0" prefHeight="27.0" prefWidth="181.0" />
-            <ComboBox fx:id="fieldGender" layoutX="202.0" layoutY="204.0" prefHeight="25.0" prefWidth="181.0" promptText="Selecione o seu gênero" />
+            <ComboBox id="customerInformation" fx:id="fieldGender" layoutX="202.0" layoutY="204.0" prefHeight="25.0" prefWidth="181.0" promptText="Selecione o seu gênero" />
             <Label id="customerRegistrationFields" layoutX="202.0" layoutY="177.0" stylesheets="@EditClient.css" text="Gênero" />
-            <ComboBox fx:id="fieldCivilStatus" layoutX="399.0" layoutY="205.0" prefHeight="25.0" prefWidth="181.0" promptText="Selecione o estado civil" />
+            <ComboBox id="customerInformation" fx:id="fieldCivilStatus" layoutX="399.0" layoutY="205.0" prefHeight="25.0" prefWidth="181.0" promptText="Selecione o estado civil" />
             <Label id="customerRegistrationFields" layoutX="399.0" layoutY="178.0" stylesheets="@EditClient.css" text="Estado Civil" />
             <Label id="customerRegistrationFields" layoutX="592.0" layoutY="177.0" stylesheets="@EditClient.css" text="CPF" />
             <TextField id="customerInformation" fx:id="fieldCPF" layoutX="591.0" layoutY="204.0" prefHeight="27.0" prefWidth="181.0" />
@@ -75,13 +75,13 @@
             <TextField id="customerInformation" fx:id="fieldNeighborhood" layoutX="592.0" layoutY="344.0" prefHeight="27.0" prefWidth="181.0" />
             <TextField id="customerInformation" fx:id="fieldComplement" layoutX="203.0" layoutY="407.0" prefHeight="27.0" prefWidth="181.0" />
             <Label id="customerRegistrationFields" layoutX="203.0" layoutY="381.0" stylesheets="@EditClient.css" text="Complemento" />
-            <Button id="btnEditClient" layoutX="556.0" layoutY="452.0" mnemonicParsing="false" onAction="#registerCustomer" prefHeight="35.0" prefWidth="113.0" stylesheets="@EditClient.css" text="Editar cliente" />
+            <Button id="btnEditClient" layoutX="556.0" layoutY="452.0" mnemonicParsing="false" onAction="#editClient" prefHeight="35.0" prefWidth="113.0" stylesheets="@EditClient.css" text="Editar cliente" />
             <Button id="btnBack" fx:id="btnBackChooseClient" layoutX="682.0" layoutY="452.0" mnemonicParsing="false" onAction="#btnBackChooseClientView" prefHeight="35.0" prefWidth="92.0" stylesheets="@EditClient.css" text="Voltar" />
             <Label id="customerRegistrationFields" layoutX="399.0" layoutY="317.0" stylesheets="@EditClient.css" text="Número" />
             <TextField id="customerInformation" fx:id="fieldNumber" layoutX="399.0" layoutY="344.0" prefHeight="27.0" prefWidth="181.0" />
             <Label id="customerRegistrationFields" layoutX="593.0" layoutY="381.0" stylesheets="@EditClient.css" text="Cidade" />
             <TextField id="customerInformation" fx:id="fieldCity" layoutX="591.0" layoutY="409.0" prefHeight="27.0" prefWidth="181.0" />
-            <ComboBox fx:id="fieldState" layoutX="399.0" layoutY="408.0" prefHeight="25.0" prefWidth="181.0" promptText="Selecione o estado" />
+            <ComboBox id="customerInformation" fx:id="fieldState" layoutX="399.0" layoutY="408.0" prefHeight="25.0" prefWidth="181.0" promptText="Selecione o estado" />
             <Label id="customerRegistrationFields" layoutX="402.0" layoutY="250.0" stylesheets="@EditClient.css" text="Celular" />
          </children>
       </Pane>

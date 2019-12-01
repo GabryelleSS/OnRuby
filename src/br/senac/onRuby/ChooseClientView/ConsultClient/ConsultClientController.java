@@ -33,7 +33,6 @@ public class ConsultClientController {
     
     @FXML
     private TextField fielSearchClient;
-    @FXML
     private Button btnBackChooseClient;    
     @FXML
     private TableView<Client> tabletClient;
@@ -43,8 +42,6 @@ public class ConsultClientController {
     private TableColumn<Client, String> columName;
     @FXML
     private TableColumn<Client, String> columPhone;    
-    @FXML
-    private Button btnSelectEdit;
     
     public void initialize() {
         
@@ -61,39 +58,50 @@ public class ConsultClientController {
     
     @FXML
     private void btnSearchClient(ActionEvent event) {
-        tabletClient.getItems().clear(); 
-        
-        List result = listSearchClient();
-        
-        if(result != null) {
-            tabletClient.setItems(
-                FXCollections.observableArrayList(result)
-            );
-        } 
+        try {
+            tabletClient.getItems().clear(); 
+
+            List result = listSearchClient();
+
+            if(result != null) {
+                tabletClient.setItems(
+                    FXCollections.observableArrayList(result)
+                );
+            } 
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro");
+            alert.setContentText("Dados não encontrados!");
+            alert.showAndWait();
+        }
     }
     
 //    @FXML
-//    private void editClient(ActionEvent event) {
-//        Client client = tabletClient.getSelectionModel().getSelectedItem();
-//        
-//        if(client != null) {
-//            
-//            editMode = true;
-//            
-//            clientEdit = client;
-//            
-//            txtCpf.setText(clientEdit.getCpf());
-//            txtNome.setText(clientEdit.getNome());
-//            txtSobrenome.setText(clientEdit.getSobrenome());
-//            dpDataNasc.setValue(clientEdit.getDataNascimento());
-//            comboGenero.setValue(clientEdit.getGenero());
-//            
-//            txtCpf.requestFocus();
-//            
-//            btnSalvar.setText("Salvar");
+//    private void btnEditClient(ActionEvent event) {
+//        try {
+//            if(editClientStage == null || !editClientStage.isShowing()) {
+//
+//                Parent editClient = FXMLLoader.load(
+//                    getClass().getResource(
+//                        "/br/senac/onRuby/ChooseClientView/EditClient/EditClient.fxml"
+//                    )
+//                );
+//
+//                editClientStage = new Stage();
+//                Scene scene = new Scene(editClient);
+//
+//                editClientStage.setScene(scene);
+//                editClientStage.setTitle("Cliente");
+//                editClientStage.show();
+//                Stage stage = (Stage) btnBackChooseClient.getScene().getWindow();
+//                stage.close();  
+//            }
 //        }
-//        else {
-//            Alert alert = new Alert(AlertType.ERROR);
+//        catch(Exception e) {
+//            e.printStackTrace();
+//            Alert alert = new Alert(Alert.AlertType.ERROR);
 //            alert.setTitle("Erro");
 //            alert.setContentText("É necessário selecionar um cliente");
 //            alert.showAndWait();
@@ -112,7 +120,7 @@ public class ConsultClientController {
             
             if(result.get() == ButtonType.OK){
                 try {
-                    deleteClient(client);
+                    btnDeleteClient(client);
                     btnSearchClient(event);
                 }
                 catch(Exception e) {
@@ -133,7 +141,7 @@ public class ConsultClientController {
         }
     }
     
-    private void deleteClient(Client client) throws Exception {
+    private void btnDeleteClient(Client client) throws Exception {
         DaoClient.excluir(client.getIdClient());
     }
 
@@ -181,24 +189,17 @@ public class ConsultClientController {
         return result;
     }
 
-    @FXML
-    private void selectEditClient(ActionEvent event) throws Exception {        
-        if(editClientStage == null || !editClientStage.isShowing()) {
-            
-            Parent editClient = FXMLLoader.load(
-                getClass().getResource(
-                    "/br/senac/onRuby/ChooseClientView/EditClient/EditClient.fxml"
-                )
-            );
-
-            editClientStage = new Stage();
-            Scene scene = new Scene(editClient);
-
-            editClientStage.setScene(scene);
-            editClientStage.setTitle("Cliente");
-            editClientStage.show();
-            Stage stage = (Stage) btnBackChooseClient.getScene().getWindow();
-            stage.close();  
-        }
-    }
+//    @FXML
+//    private void btnDeleteClient(ActionEvent event) {
+//        try {
+//            deletar cliente
+//        }
+//        catch(Exception e) {
+//            e.printStackTrace();
+//            Alert alert = new Alert(Alert.AlertType.ERROR);
+//            alert.setTitle("Erro");
+//            alert.setContentText("Ocorreu um erro ao deletar um cliente");
+//            alert.showAndWait();
+//        }
+//    }
 }

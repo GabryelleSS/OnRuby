@@ -24,8 +24,17 @@
     -fx-border-radius: 5px;
 }
 
+#btnEditClient:hover, #btnBack:hover {
+    -fx-background-color: #307880;
+    -fx-border-color: #fff;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
 #customerInformation {
-    -fx-background-color: #fff;
-    -fx-border-color: #307880;
+    -fx-background-color: #4B7E80;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+    -fx-border-color: #fff;
     -fx-border-radius: 5px;
 }

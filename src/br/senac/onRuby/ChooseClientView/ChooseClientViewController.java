@@ -42,15 +42,15 @@ public class ChooseClientViewController {
 
     @FXML
     private void btnConsultClient() throws Exception {
-        if (clientStage == null || !clientStage.isShowing()) {
-            Parent ClientRegistration = FXMLLoader.load(
-                    getClass().getResource(
-                            "/br/senac/onRuby/ChooseClientView/ConsultClient/ConsultClient.fxml"
-                    )
+        if(clientStage == null || !clientStage.isShowing()) {
+            Parent consultClient = FXMLLoader.load(
+                getClass().getResource(
+                    "/br/senac/onRuby/ChooseClientView/ConsultClient/ConsultClient.fxml"
+                )
             );
 
             clientStage = new Stage();
-            Scene scene = new Scene(ClientRegistration);
+            Scene scene = new Scene(consultClient);
 
             clientStage.setScene(scene);
             clientStage.setTitle("Registro de Cliente");
