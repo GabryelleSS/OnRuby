@@ -9,50 +9,24 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class RegisterSaleClothesController {
     
     private Stage RegisterClothingSale;
-    
     @FXML
     private Button btnBackChooseClothes;
     @FXML
-    private ComboBox<String> clothingCategory;
+    private TextField fieldCodClient;
     @FXML
-    private ComboBox<String> sizeClothing;
+    private TextField fieldCodClothes;
+    @FXML
+    private TextField fieldQuanClothes;
+    @FXML
+    private TableView<String> tableSaleClothes;
     
-    public void initialize() {
-         
-        clothingCategory.getItems().addAll(
-            "Acessório",
-            "Bermudas e Shorts",
-            "Bijuterias",
-            "Blusas e Camisetas",
-            "Blusões e Suéteres",
-            "Bolsas",
-            "Calçados",
-            "Calça",
-            "Camisas",
-            "Casacos e Jaquetas",
-            "Coletes",
-            "Macacões e Jardineiras",
-            "Óculos de Sol",
-            "Pijamas",
-            "Relógios",
-            "Saias",
-            "Vestidos"
-        );
-        
-        sizeClothing.getItems().addAll(
-            "PP",
-            "P",
-            "M",
-            "G",
-            "GG"
-        );
-     }
-
     @FXML
     private void btnBackChooseClothes() throws Exception {
         if(RegisterClothingSale == null || !RegisterClothingSale.isShowing()) {
@@ -75,7 +49,17 @@ public class RegisterSaleClothesController {
     }
     
     @FXML
-    private void btnSaveClothes(ActionEvent event) {
-        
+    private void btnClearFields(ActionEvent event) {
+        fieldCodClient.setText("");
+        fieldCodClothes.setText("");
+        fieldQuanClothes.setText("");
+    }
+
+    @FXML
+    private void btnFinishSale(ActionEvent event) {
+    }
+
+    @FXML
+    private void btnSearch(ActionEvent event) {
     }
 }

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.ChooseClothingSale.ChooseClothingSaleController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.ChooseClothingSale.ChooseClothingSaleController">
    <children>
       <Pane prefHeight="500.0" prefWidth="780.0" stylesheets="@ChooseClothing.css">
          <children>
@@ -60,7 +60,7 @@
                      </children>
                   </Pane>
                   <Button id="btnBackHome" fx:id="btnBackHome" layoutX="504.0" layoutY="360.0" mnemonicParsing="false" onAction="#btnBackHome" prefHeight="37.0" prefWidth="88.0" text="Voltar" />
-                  <Button id="btnRegisterSale" layoutX="65.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnRegisterClothes" prefHeight="36.0" prefWidth="167.0" text="Cadastrar Venda" />
+                  <Button id="btnRegisterSale" layoutX="65.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnRegisterClothes" prefHeight="36.0" prefWidth="167.0" text="Realizar Venda" />
                </children>
             </Pane>
          </children>
