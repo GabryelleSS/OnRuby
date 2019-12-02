@@ -1,0 +1,24 @@
+#headerConsultClothes, #menuConsultClothes {
+    -fx-background-color: #00367D;
+}
+
+#btnViewConsultClothes {
+    -fx-border-radius: 10px;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5px;
+}
+
+#paneConsultClothes {
+    -fx-background-color: #3f84b5;    
+}
+
+#btnViewConsultClothes, #textFieldSearchClothes {
+    -fx-border-radius: 5px;
+    -fx-border-color: #00367D;
+    -fx-background-color: #3f84b5;
+}
+
+#btnViewConsultClothes:hover {
+    -fx-border-color: #239bda;
+}

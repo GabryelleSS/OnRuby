@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.StockRegistration.ConsultClothes.ConsultClothesController">
+   <children>
+      <Pane id="paneConsultClothes" prefHeight="500.0" prefWidth="780.0" stylesheets="@../../ChooseClientView/ConsultClient/ConsultClient.css">
+         <children>
+            <Pane id="menuConsultClothes" prefHeight="500.0" prefWidth="200.0">
+               <children>
+                  <Pane id="headerConsultClothes" prefHeight="85.0" prefWidth="780.0">
+                     <children>
+                        <Label layoutX="257.0" layoutY="25.0" text="Consultar Produto" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="389.0" fitWidth="165.0" layoutX="14.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icon/pessoa.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="163.0" fitWidth="166.0" layoutX="78.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icon/speech-bubble.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="98.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Você pode buscar o produto pelo código do produto, nome ou categoria" wrappingWidth="120.99999999999989">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <TableView layoutX="238.0" layoutY="188.0" prefHeight="200.0" prefWidth="500.0">
+              <columns>
+                <TableColumn prefWidth="70.0" text="Código" />
+                <TableColumn prefWidth="152.0" text="Nome" />
+                  <TableColumn prefWidth="175.0" text="Categoria" />
+                  <TableColumn prefWidth="102.0" text="Preço unitario" />
+              </columns>
+            </TableView>
+            <Button id="btnViewConsultClothes" fx:id="btnBackChooseStock" layoutX="712.0" layoutY="461.0" mnemonicParsing="false" onAction="#btnBackChooseStock" text="Voltar" />
+            <Button id="btnViewConsultClothes" layoutX="675.0" layoutY="393.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="62.0" text="Editar" />
+            <TextField id="textFieldSearchClothes" layoutX="241.0" layoutY="108.0" prefHeight="32.0" prefWidth="369.0" promptText="Digite o código do produto, nome ou categoria" />
+            <Button id="btnViewConsultClothes" layoutX="463.0" layoutY="149.0" mnemonicParsing="false" stylesheets="@../../ChooseClientView/ConsultClient/ConsultClient.css" text="Pesquisar" />
+            <Button id="btnViewConsultClothes" layoutX="557.0" layoutY="149.0" mnemonicParsing="false" text="Limpar" />
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../../ChooseClientView/ConsultClient/ConsultClient.css" />
+      <URL value="@ConsultClothes.css" />
+   </stylesheets>
+</AnchorPane>

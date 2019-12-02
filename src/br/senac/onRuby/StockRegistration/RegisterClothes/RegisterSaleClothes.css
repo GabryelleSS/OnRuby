@@ -1,0 +1,39 @@
+#bodyRegisterSaleClothes {
+    -fx-background-color: #69CC58;
+}
+
+#headerRegisterSaleClothes {
+    -fx-background-color: #428037;
+}
+
+#menuRegisterSaleClothes {
+    -fx-background-color: #428037;
+}
+
+#fieldRegisterSale {
+    -fx-background-color: #69CC58;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+    -fx-border-radius: 5px;
+    -fx-border-color: #428037;
+}
+
+#textAreaRegisterSale {
+    -fx-background-color: #69CC58;
+    -fx-text-fill: #000;
+    -fx-cursor: hand;
+    -fx-border-radius: 5px;
+    -fx-border-color: #428037;
+}
+
+#btnRegisterSale {
+    -fx-background-color: #428037;
+    -fx-text-fill: #fff;
+    -fx-border-color: #fff;
+    -fx-border-radius: 3px;
+}
+
+#btnRegisterSale:hover {
+    -fx-cursor: hand;
+    -fx-border-color: #428037;
+}

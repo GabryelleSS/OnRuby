@@ -14,10 +14,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-/**
- *
- * @author gabry
- */
 public class ChooseProductRegisterController {
     
     private Stage ChooseProductRegister;
@@ -27,10 +23,62 @@ public class ChooseProductRegisterController {
 
     @FXML
     private void btnRegisterProduct(ActionEvent event) {
+        try {
+            if (ChooseProductRegister == null || !ChooseProductRegister.isShowing()) {
+                Parent chooseProductRegister = FXMLLoader.load(
+                        getClass().getResource(
+                                "/br/senac/onRuby/StockRegistration/RegisterClothes/RegisterClothes.fxml"
+                        )
+                );
+
+                ChooseProductRegister = new Stage();
+                Scene scene = new Scene(chooseProductRegister);
+
+                ChooseProductRegister.setScene(scene);
+                ChooseProductRegister.setTitle("Home");
+                ChooseProductRegister.show();
+            }
+
+            Stage stage = (Stage) btnBackHome.getScene().getWindow();
+            stage.close();
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro");
+            alert.setContentText("Ocorreu um erro ao voltar a tela");
+            alert.showAndWait();
+        }
     }
 
     @FXML
     private void btnConsultProduct(ActionEvent event) {
+        try {
+            if (ChooseProductRegister == null || !ChooseProductRegister.isShowing()) {
+                Parent chooseProductRegister = FXMLLoader.load(
+                        getClass().getResource(
+                                "/br/senac/onRuby/StockRegistration/ConsultClothes/ConsultClothes.fxml"
+                        )
+                );
+
+                ChooseProductRegister = new Stage();
+                Scene scene = new Scene(chooseProductRegister);
+
+                ChooseProductRegister.setScene(scene);
+                ChooseProductRegister.setTitle("Consultar Produto");
+                ChooseProductRegister.show();
+            }
+
+            Stage stage = (Stage) btnBackHome.getScene().getWindow();
+            stage.close();
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro");
+            alert.setContentText("Ocorreu um erro ao voltar a tela");
+            alert.showAndWait();
+        }
     }
 
     @FXML

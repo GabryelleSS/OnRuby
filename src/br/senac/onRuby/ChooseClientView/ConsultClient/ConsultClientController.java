@@ -40,6 +40,14 @@ public class ConsultClientController {
 //    private TableColumn<Client, String> columName;
 //    @FXML
 //    private TableColumn<Client, String> columPhone;    
+    @FXML
+    private TableView<?> tabletClient;
+    @FXML
+    private TableColumn<?, ?> columCPF;
+    @FXML
+    private TableColumn<?, ?> columName;
+    @FXML
+    private TableColumn<?, ?> columPhone;
     
 //    public void initialize() {
 //        
@@ -200,12 +208,4 @@ public class ConsultClientController {
 //            alert.showAndWait();
 //        }
 //    }
-
-    @FXML
-    private void btnEditClient(ActionEvent event) {
-    }
-
-    @FXML
-    private void btnDeleteClient(ActionEvent event) {
-    }
 }

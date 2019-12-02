@@ -159,4 +159,8 @@ public class ClientRegistrationController {
     private void btnConfirmNotificationWarning(ActionEvent event) {
         paneNotificationWarning.setVisible(false);
     }   
+
+    @FXML
+    private void registerCustomer(ActionEvent event) {
+    }
 }
