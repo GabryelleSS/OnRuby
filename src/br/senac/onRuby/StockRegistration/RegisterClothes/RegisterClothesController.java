@@ -1,14 +1,25 @@
 package br.senac.onRuby.StockRegistration.RegisterClothes;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.stage.Stage;
 
 public class RegisterClothesController {
+    
+    private Stage registerClothes;
     
     @FXML
     private ComboBox<String> clothingCategory;
     @FXML
     private ComboBox<String> sizeClothing;
+    @FXML
+    private Button btnBackChooseClothes;
     
     public void initialize() {
          
@@ -40,4 +51,38 @@ public class RegisterClothesController {
             "GG"
         );
      }
+
+    @FXML
+    private void btnBackChooseClothes(ActionEvent event) {
+        try {
+            if(registerClothes == null || !registerClothes.isShowing()) {
+                Parent chooseClient = FXMLLoader.load(
+                    getClass().getResource(
+                        "/br/senac/onRuby/StockRegistration/ChooseProductRegister.fxml"
+                    )
+                );
+
+                registerClothes = new Stage();
+                Scene scene = new Scene(chooseClient);
+
+                registerClothes.setScene(scene);
+                registerClothes.setTitle("Estoque");
+                registerClothes.show();
+
+                Stage stage = (Stage) btnBackChooseClothes.getScene().getWindow();
+                stage.close();
+            }
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro");
+            alert.setContentText("É necessário selecionar um cliente");
+            alert.showAndWait();
+        }
+    }
+
+    @FXML
+    private void btnSaveClothes(ActionEvent event) {
+    }
 }

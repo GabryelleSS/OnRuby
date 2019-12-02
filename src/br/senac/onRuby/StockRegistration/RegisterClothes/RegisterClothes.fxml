@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.ChooseClothingSale.RegisterSaleClothes.RegisterSaleClothesController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.StockRegistration.RegisterClothes.RegisterClothesController">
    <children>
       <Pane prefHeight="500.0" prefWidth="780.0">
          <children>
@@ -106,7 +106,7 @@
       </Pane>
    </children>
    <stylesheets>
-      <URL value="@../ChooseClothingSale/RegisterSaleClothes/RegisterSaleClothes.css" />
+      <URL value="@../StockRegistration/RegisterClothes/RegisterSaleClothes.css" />
       <URL value="@RegisterSaleClothes.css" />
    </stylesheets>
 </AnchorPane>
