@@ -32,14 +32,7 @@ public class ConsultClientController {
     @FXML
     private TextField fielSearchClient;
     private Button btnBackChooseClient;    
-//    @FXML
-//    private TableView<Client> tabletClient;
-//    @FXML
-//    private TableColumn<Client, String> columCPF;
-//    @FXML
-//    private TableColumn<Client, String> columName;
-//    @FXML
-//    private TableColumn<Client, String> columPhone;    
+    
     @FXML
     private TableView<?> tabletClient;
     @FXML
@@ -171,10 +164,9 @@ public class ConsultClientController {
             consultClientStage.setScene(scene);
             consultClientStage.setTitle("Player");
             consultClientStage.show();
-            
-            Stage stage = (Stage) btnBackChooseClient.getScene().getWindow();
-            stage.close();
         }
+        Stage stage = (Stage) btnBackChooseClient.getScene().getWindow();
+        stage.close();
     }
     
 //    private List listSearchClient() {

@@ -50,18 +50,19 @@
                   </Text>
                   <TableView layoutX="17.0" layoutY="125.0" prefHeight="241.0" prefWidth="579.0">
                     <columns>
-                      <TableColumn prefWidth="100.0" text="Código" />
-                      <TableColumn prefWidth="145.0" text="Categoria" />
-                        <TableColumn prefWidth="129.0" text="Preço" />
-                        <TableColumn prefWidth="107.0" text="Quantidade" />
-                        <TableColumn prefWidth="102.0" text="Data da venda" />
+                        <TableColumn prefWidth="67.0" text="Código" />
+                        <TableColumn prefWidth="101.0" text="ID Cliente" />
+                        <TableColumn prefWidth="194.0" text="Nome produto" />
+                      <TableColumn prefWidth="121.0" text="Quantidade" />
+                      <TableColumn prefWidth="100.0" text="Preço" />
+                        <TableColumn prefWidth="75.0" text="Column X" />
                     </columns>
                   </TableView>
-                  <TextField id="fieldSearchClothingSale" layoutX="115.0" layoutY="14.0" prefHeight="25.0" prefWidth="172.0" promptText="Digite o código do produto" />
-                  <Button id="btnBackChooseConsultClothingSala" layoutX="453.0" layoutY="60.0" mnemonicParsing="false" text="Limpar" />
-                  <Button id="btnBackChooseConsultClothingSala" layoutX="358.0" layoutY="60.0" mnemonicParsing="false" text="Filtrar" />
+                  <TextField id="fieldSearchClothingSale" layoutX="115.0" layoutY="14.0" prefHeight="27.0" prefWidth="212.0" promptText="Digite o código do produto" />
+                  <Button id="btnBackChooseConsultClothingSala" layoutX="523.0" layoutY="60.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="72.0" text="Limpar" />
+                  <Button id="btnBackChooseConsultClothingSala" layoutX="443.0" layoutY="60.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="72.0" text="Filtrar" />
                   <Button id="btnBackChooseConsultClothingSala" fx:id="btnBackToChooseClothingSale" layoutX="524.0" layoutY="383.0" mnemonicParsing="false" onAction="#btnBackToChooseClothingSale" prefHeight="31.0" prefWidth="72.0" text="Voltar" />
-                  <ComboBox id="fieldSearchClothingSale" fx:id="clothingCategory" layoutX="307.0" layoutY="14.0" prefHeight="27.0" prefWidth="200.0" promptText="Selecione a categoria" />
+                  <ComboBox id="fieldSearchClothingSale" fx:id="clothingCategory" layoutX="383.0" layoutY="14.0" prefHeight="27.0" prefWidth="212.0" promptText="Selecione a categoria" />
                </children>
             </Pane>
          </children>

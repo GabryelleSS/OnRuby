@@ -78,10 +78,9 @@ public class RegisterClothesController {
                 registerClothes.setScene(scene);
                 registerClothes.setTitle("Estoque");
                 registerClothes.show();
-
-                Stage stage = (Stage) btnBackChooseClothes.getScene().getWindow();
-                stage.close();
             }
+            Stage stage = (Stage) btnBackChooseClothes.getScene().getWindow();
+            stage.close();
         }
         catch(Exception e) {
             e.printStackTrace();
