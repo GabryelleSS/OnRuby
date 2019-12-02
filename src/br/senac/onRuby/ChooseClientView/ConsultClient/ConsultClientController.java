@@ -208,4 +208,16 @@ public class ConsultClientController {
 //            alert.showAndWait();
 //        }
 //    }
+
+    @FXML
+    private void btnSearchClient(ActionEvent event) {
+    }
+
+    @FXML
+    private void btnEditClient(ActionEvent event) {
+    }
+
+    @FXML
+    private void btnDeleteClient(ActionEvent event) {
+    }
 }

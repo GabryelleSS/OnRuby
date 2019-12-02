@@ -8,6 +8,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class RegisterClothesController {
@@ -20,6 +22,14 @@ public class RegisterClothesController {
     private ComboBox<String> sizeClothing;
     @FXML
     private Button btnBackChooseClothes;
+    @FXML
+    private TextField clothesQuantClothes;
+    @FXML
+    private TextField clothesPrice;
+    @FXML
+    private TextField clothesName;
+    @FXML
+    private TextArea clothesDescription;
     
     public void initialize() {
          
@@ -84,5 +94,15 @@ public class RegisterClothesController {
 
     @FXML
     private void btnSaveClothes(ActionEvent event) {
+    }
+
+    @FXML
+    private void clearFields(ActionEvent event) {
+        clothingCategory.valueProperty().set("Selecione a categoria");
+        sizeClothing.valueProperty().set("Selecione o tamanho");
+        clothesQuantClothes.setText("");
+        clothesPrice.setText("");
+        clothesName.setText("");
+        clothesDescription.setText("");
     }
 }

@@ -55,9 +55,9 @@
             </TableView>
             <Button id="btnViewConsultClothes" fx:id="btnBackChooseStock" layoutX="712.0" layoutY="461.0" mnemonicParsing="false" onAction="#btnBackChooseStock" text="Voltar" />
             <Button id="btnViewConsultClothes" layoutX="675.0" layoutY="393.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="62.0" text="Editar" />
-            <TextField id="textFieldSearchClothes" layoutX="241.0" layoutY="108.0" prefHeight="32.0" prefWidth="369.0" promptText="Digite o código do produto, nome ou categoria" />
+            <TextField id="textFieldSearchClothes" fx:id="fieldSearchClothes" layoutX="241.0" layoutY="108.0" prefHeight="32.0" prefWidth="380.0" promptText="Digite o código do produto, nome ou categoria" />
             <Button id="btnViewConsultClothes" layoutX="463.0" layoutY="149.0" mnemonicParsing="false" stylesheets="@../../ChooseClientView/ConsultClient/ConsultClient.css" text="Pesquisar" />
-            <Button id="btnViewConsultClothes" layoutX="557.0" layoutY="149.0" mnemonicParsing="false" text="Limpar" />
+            <Button id="btnViewConsultClothes" layoutX="557.0" layoutY="149.0" mnemonicParsing="false" onAction="#btnClearFields" text="Limpar" />
          </children>
       </Pane>
    </children>

@@ -41,11 +41,11 @@
             </Pane>
             <Pane id="bodyRegisterSaleClothes" layoutX="164.0" layoutY="67.0" prefHeight="434.0" prefWidth="618.0">
                <children>
-                  <TextField id="fieldRegisterSale" layoutX="223.0" layoutY="124.0" prefHeight="25.0" prefWidth="198.0" />
+                  <TextField id="fieldRegisterSale" fx:id="clothesQuantClothes" layoutX="223.0" layoutY="124.0" prefHeight="25.0" prefWidth="198.0" />
                   <ComboBox id="fieldRegisterSale" fx:id="clothingCategory" layoutX="223.0" layoutY="19.0" prefHeight="25.0" prefWidth="198.0" promptText="Selecione a categoria" />
-                  <TextField id="fieldRegisterSale" layoutX="223.0" layoutY="174.0" prefHeight="25.0" prefWidth="198.0" />
+                  <TextField id="fieldRegisterSale" fx:id="clothesPrice" layoutX="223.0" layoutY="174.0" prefHeight="25.0" prefWidth="198.0" />
                   <ComboBox id="fieldRegisterSale" fx:id="sizeClothing" layoutX="223.0" layoutY="231.0" prefHeight="25.0" prefWidth="198.0" promptText="Selecione o tamanho" />
-                  <TextField id="fieldRegisterSale" layoutX="223.0" layoutY="71.0" prefHeight="25.0" prefWidth="198.0" />
+                  <TextField id="fieldRegisterSale" fx:id="clothesName" layoutX="223.0" layoutY="71.0" prefHeight="25.0" prefWidth="198.0" />
                   <Label layoutX="14.0" layoutY="18.0" text="Categoria:" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
@@ -97,9 +97,9 @@
                      </image>
                   </ImageView>
                   <Button id="btnRegisterSale" fx:id="btnBackChooseClothes" layoutX="556.0" layoutY="395.0" mnemonicParsing="false" onAction="#btnBackChooseClothes" text="Voltar" />
-                  <Button id="btnRegisterSale" layoutX="365.0" layoutY="394.0" mnemonicParsing="false" text="Limpar" />
+                  <Button id="btnRegisterSale" layoutX="365.0" layoutY="394.0" mnemonicParsing="false" onAction="#clearFields" text="Limpar" />
                   <Button id="btnRegisterSale" layoutX="280.0" layoutY="394.0" mnemonicParsing="false" onAction="#btnSaveClothes" text="Cadastrar" />
-                  <TextArea id="textAreaRegisterSale" layoutX="221.0" layoutY="274.0" prefHeight="108.0" prefWidth="198.0" />
+                  <TextArea id="textAreaRegisterSale" fx:id="clothesDescription" layoutX="221.0" layoutY="274.0" prefHeight="108.0" prefWidth="198.0" />
                </children>
             </Pane>
          </children>

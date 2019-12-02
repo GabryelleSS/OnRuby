@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class ConsultClothesController {
@@ -14,6 +15,8 @@ public class ConsultClothesController {
     private Stage consultClothes;
     @FXML
     private Button btnBackChooseStock;
+    @FXML
+    private TextField fieldSearchClothes;
 
     @FXML
     private void btnBackChooseStock(ActionEvent event) {
@@ -43,6 +46,11 @@ public class ConsultClothesController {
             alert.setContentText("É necessário selecionar um cliente");
             alert.showAndWait();
         }
+    }
+
+    @FXML
+    private void btnClearFields(ActionEvent event) {
+        fieldSearchClothes.setText("");
     }
     
 }
