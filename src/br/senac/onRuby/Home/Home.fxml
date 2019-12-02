@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="780.0" stylesheets="@Home.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.Home.HomeController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="780.0" stylesheets="@Home.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.senac.onRuby.Home.HomeController">
    <children>
       <ImageView id="homeBanner" fitHeight="183.0" fitWidth="796.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -50,13 +50,13 @@
                <children>
                   <ImageView fitHeight="110.0" fitWidth="110.0" layoutX="29.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../icon/treasure.png" />
+                        <Image url="@../../icon/costume-clothes.png" />
                      </image>
                   </ImageView>
                </children></Pane>
             <Button id="btnHome" fx:id="btnClient" layoutX="5.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenClientView" prefHeight="38.0" prefWidth="168.0" text="Cliente" textFill="WHITE" />
             <Button id="btnHome" layoutX="185.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenClothingSale" prefHeight="41.0" prefWidth="168.0" stylesheets="@Home.css" text="Venda" />
-            <Button id="btnHome" layoutX="361.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenStockView" prefHeight="41.0" prefWidth="168.0" stylesheets="@Home.css" text="Estoque" />
+            <Button id="btnHome" layoutX="361.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenStockView" prefHeight="41.0" prefWidth="168.0" stylesheets="@Home.css" text="Produto" />
             <Button id="btnHome" layoutX="539.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnOpenReportView" prefHeight="41.0" prefWidth="168.0" text="Relatório" />
          </children>
       </Pane>

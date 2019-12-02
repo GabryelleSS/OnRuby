@@ -1,5 +1,5 @@
 #productRegistrationForm {
-    -fx-background-color: #232d40;
+    -fx-background-color: #4C807E;
 }
 
 #btnBack {
@@ -10,12 +10,19 @@
 }
 
 #productRegistrationField {
-    -fx-background-color: #232d40;
-    -fx-border-color: #232d40 #232d40 #fff #232d40;
+    -fx-background-color: #4C807E;
+    -fx-border-color: #fff;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-font-size: 12px;
 }
 
-#productRegistrationFields {
-    -fx-font-size: 18px;
+#productRegistrationFields:hover {
+    -fx-border-color: #1e4388;
+}
+
+#labelStockRegistration {
+    -fx-font-size: 16px;
 }
 
 #btnRegister {
@@ -24,7 +31,7 @@
     -fx-cursor: hand;
 }
 
-#illustration {
+#menuStockRegistration, #headerStockRgistration {
     -fx-background-color: #fff;
 }
 

@@ -1,5 +1,5 @@
 
-package br.senac.onRuby.StockRegistration;
+package br.senac.onRuby.StockRegistration.ProductRegister;
 
 import java.net.URL;
 import java.util.ResourceBundle;
