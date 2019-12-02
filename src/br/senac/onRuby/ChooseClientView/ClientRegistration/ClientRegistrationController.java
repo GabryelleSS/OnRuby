@@ -1,6 +1,5 @@
 package br.senac.onRuby.ChooseClientView.ClientRegistration;
 
-import br.senac.onRuby.ChooseClientView.Client;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -61,8 +60,6 @@ public class ClientRegistrationController {
     private ComboBox<String> fieldCivilStatus;
     @FXML
     private ComboBox<String> fieldState;
-
-    private Client client = new Client();
     
     public void initialize() {
         fieldGender.getItems().addAll(
@@ -109,33 +106,33 @@ public class ClientRegistrationController {
         );
     }
 
-    @FXML
-    private void registerCustomer(ActionEvent event) throws Exception {
-        client.setFirstName(fieldFirstName.getText());
-        client.setLastName(fieldLastName.getText());
-        
-        boolean checkFirstNameEmpty = client.getFirstName().trim().isEmpty();
-        boolean checkLastNameEmpty = client.getLastName().trim().isEmpty();
-        
-        if(client.getFirstName() == null || checkFirstNameEmpty) {
-            titleNotificationWarning.setText("Cuidado!");
-            contentNotificationWarning.setText("O campo \"Nome\" é obrigatório, por gentileza preencha!");
-            paneNotificationWarning.setVisible(true);
-        }
-        else if(client.getLastName() == null || checkLastNameEmpty) {
-            titleNotificationWarning.setText("Cuidado!");
-            contentNotificationWarning.setText("O campo \"Sobrenome\" é obrigatório, por gentileza preencha!");
-            paneNotificationWarning.setVisible(true);
-        }
-        else {
-            titleNotificationWarning.setText("Concluído!");
-            contentNotificationWarning.setText("Player criado!");
-            paneNotificationWarning.setVisible(true);
-            
-            fieldFirstName.setText("");
-            fieldLastName.setText("");
-        }
-    }
+//    @FXML
+//    private void registerCustomer(ActionEvent event) throws Exception {
+//        client.setFirstName(fieldFirstName.getText());
+//        client.setLastName(fieldLastName.getText());
+//        
+//        boolean checkFirstNameEmpty = client.getFirstName().trim().isEmpty();
+//        boolean checkLastNameEmpty = client.getLastName().trim().isEmpty();
+//        
+//        if(client.getFirstName() == null || checkFirstNameEmpty) {
+//            titleNotificationWarning.setText("Cuidado!");
+//            contentNotificationWarning.setText("O campo \"Nome\" é obrigatório, por gentileza preencha!");
+//            paneNotificationWarning.setVisible(true);
+//        }
+//        else if(client.getLastName() == null || checkLastNameEmpty) {
+//            titleNotificationWarning.setText("Cuidado!");
+//            contentNotificationWarning.setText("O campo \"Sobrenome\" é obrigatório, por gentileza preencha!");
+//            paneNotificationWarning.setVisible(true);
+//        }
+//        else {
+//            titleNotificationWarning.setText("Concluído!");
+//            contentNotificationWarning.setText("Player criado!");
+//            paneNotificationWarning.setVisible(true);
+//            
+//            fieldFirstName.setText("");
+//            fieldLastName.setText("");
+//        }
+//    }
 
     @FXML
     private void btnBackChooseClientView() throws Exception {

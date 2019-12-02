@@ -12,6 +12,7 @@ public class ChooseClientViewController {
 
     private Stage ChooseClientViewStage;
     private Stage clientStage;
+    
     @FXML
     private Button btnBackHome;
     @FXML
@@ -21,11 +22,11 @@ public class ChooseClientViewController {
 
     @FXML
     private void btnRegisterClient() throws Exception {
-        if (clientStage == null || !clientStage.isShowing()) {
+        if(clientStage == null || !clientStage.isShowing()) {
             Parent ClientRegistration = FXMLLoader.load(
-                    getClass().getResource(
-                            "/br/senac/onRuby/ChooseClientView/ClientRegistration/ClientRegistration.fxml"
-                    )
+                getClass().getResource(
+                    "/br/senac/onRuby/ChooseClientView/ClientRegistration/ClientRegistration.fxml"
+                )
             );
 
             clientStage = new Stage();

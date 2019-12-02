@@ -17,7 +17,7 @@
          <children>
             <ImageView fitHeight="319.0" fitWidth="229.0" layoutX="23.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../icon/persona_seis.png" />
+                  <Image url="@../../../icon/persona_seis.png" />
                </image>
             </ImageView>
             <Pane id="headerStockRgistration" prefHeight="72.0" prefWidth="769.0" stylesheets="@StockRegistration.css">
@@ -40,7 +40,7 @@
             <Label id="labelStockRegistration" layoutX="18.0" layoutY="312.0" text="Preço unitário" textFill="WHITE" />
             <Label id="labelStockRegistration" layoutX="259.0" layoutY="70.0" text="Descrição" textFill="WHITE" />
             <Label id="labelStockRegistration" layoutX="259.0" layoutY="219.0" text="Quantidade" textFill="WHITE" />
-            <TextField id="productRegistrationField" layoutX="14.0" layoutY="101.0" prefHeight="27.0" prefWidth="206.0" />
+            <TextField id="productRegistrationField" disable="true" layoutX="14.0" layoutY="101.0" prefHeight="27.0" prefWidth="206.0" />
             <TextField id="productRegistrationField" layoutX="17.0" layoutY="178.0" prefHeight="27.0" prefWidth="206.0" />
             <ComboBox id="productRegistrationField" layoutX="16.0" layoutY="259.0" prefHeight="25.0" prefWidth="206.0" promptText="Selecione o tipo de produto" />
             <TextField id="productRegistrationField" layoutX="17.0" layoutY="350.0" prefHeight="27.0" prefWidth="206.0" />

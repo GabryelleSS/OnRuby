@@ -70,7 +70,7 @@ public class HomeController {
         if(homeStage == null || !homeStage.isShowing()) {
             Parent stockRegistration = FXMLLoader.load(
                 getClass().getResource(
-                    "/br/senac/onRuby/StockRegistration/StockRegistration.fxml"
+                    "/br/senac/onRuby/StockRegistration/ChooseProductRegister.fxml"
                 )
             );
             
@@ -78,7 +78,7 @@ public class HomeController {
             Scene scene = new Scene(stockRegistration);
             
             homeStage.setScene(scene);
-            homeStage.setTitle("Estoque");
+            homeStage.setTitle("Produto");
             homeStage.show();
         }
        

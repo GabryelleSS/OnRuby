@@ -98,22 +98,22 @@ public class EditClientController {
     private void btnBackChooseClientView(ActionEvent event) {
         try {
             if(editClient == null || !editClient.isShowing()) {
-            Parent chooseConsultClient = FXMLLoader.load(
-                getClass().getResource(
-                    "/br/senac/onRuby/ChooseClientView/ConsultClient/ConsultClient.fxml"
-                )
-            );
-            
-            editClient = new Stage();
-            Scene scene = new Scene(chooseConsultClient);
+                Parent chooseConsultClient = FXMLLoader.load(
+                    getClass().getResource(
+                        "/br/senac/onRuby/ChooseClientView/ConsultClient/ConsultClient.fxml"
+                    )
+                );
 
-            editClient.setScene(scene);
-            editClient.setTitle("Player");
-            editClient.show();
-            
-            Stage stage = (Stage) btnBackChooseClient.getScene().getWindow();
-            stage.close();
-        }
+                editClient = new Stage();
+                Scene scene = new Scene(chooseConsultClient);
+
+                editClient.setScene(scene);
+                editClient.setTitle("Player");
+                editClient.show();
+
+                Stage stage = (Stage) btnBackChooseClient.getScene().getWindow();
+                stage.close();
+            }
         }
         catch(Exception e) {
             e.printStackTrace();

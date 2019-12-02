@@ -1,0 +1,26 @@
+#bodyChooseProductRegister {
+    -fx-background-image: url("../../icon/594052.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover, auto;
+}
+
+#containerProductRegister {
+    -fx-background-color: #cc2a3f;
+}
+
+#headerChooseProductRegister, #menuChooseClothingSales {
+    -fx-background-color: #cc2a3f;
+}
+
+#btnBackHome, #btnProductRegister {
+    -fx-background-color: #cc2a3f;
+    -fx-border-radius: 10px;
+    -fx-font-size: 16px;
+    -fx-text-fill: #fff;
+}
+
+#btnBackHome:hover, #btnProductRegister:hover {
+    -fx-cursor: hand;
+}
+
+
